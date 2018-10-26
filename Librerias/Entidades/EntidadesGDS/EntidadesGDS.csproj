@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02BE47A3-94CE-456F-A441-B0E6270ADD93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EntidadesGDS</RootNamespace>
+    <AssemblyName>EntidadesGDS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreWebLib">
+      <HintPath>..\..\..\Dependencias\CoreWebLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\3eros\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Base\CE_Session2.cs" />
+    <Compile Include="Models\Boleto\CE_BoletoPax.cs" />
+    <Compile Include="Models\Boleto\RQ_AnulacionBoleto.cs" />
+    <Compile Include="Models\Clientes\eDestinos\CE_ProcesarBoletos.cs" />
+    <Compile Include="Models\General\CE_ArchivoExterno.cs" />
+    <Compile Include="Models\General\CE_InformacionSesion.cs" />
+    <Compile Include="Models\General\CE_Pais.cs" />
+    <Compile Include="Models\Base\CE_Ambiente.cs" />
+    <Compile Include="Models\Base\CE_Concepto.cs" />
+    <Compile Include="Models\Base\CE_Estatus.cs" />
+    <Compile Include="Models\Base\CE_Mensaje.cs" />
+    <Compile Include="Models\Base\CE_Session.cs" />
+    <Compile Include="Models\Base\CE_Transportador.cs" />
+    <Compile Include="Models\Base\Request\CE_Request4.cs" />
+    <Compile Include="Models\Comentario\CE_Comentario.cs" />
+    <Compile Include="Models\Base\Request\CE_Request3.cs" />
+    <Compile Include="Models\Base\Request\CE_Request2.cs" />
+    <Compile Include="Models\Base\Request\CE_Request1.cs" />
+    <Compile Include="Models\Base\Request\CE_RequestBase.cs" />
+    <Compile Include="Models\Base\Response\CE_Response2.cs" />
+    <Compile Include="Models\Base\Response\CE_Response3.cs" />
+    <Compile Include="Models\Base\Response\CE_Response1.cs" />
+    <Compile Include="Models\Comentario\RQ_BorrarRango.cs" />
+    <Compile Include="Models\ComisionFeePta\DT_TARIFABULK_EVALUACION.cs" />
+    <Compile Include="Models\ComisionFeePta\DT_TOURCODES_EVALUACION.cs" />
+    <Compile Include="Models\Facturacion\CE_FranquiciaConfig.cs" />
+    <Compile Include="Models\General\CE_Departamento.cs" />
+    <Compile Include="Models\General\CE_Impuestos.cs" />
+    <Compile Include="Models\General\CE_ReservaReferencia.cs" />
+    <Compile Include="Models\General\CE_Tarjeta.cs" />
+    <Compile Include="Models\General\CE_Vendedor.cs" />
+    <Compile Include="Models\Hotel\CE_Contacto.cs" />
+    <Compile Include="Models\Hotel\CE_Descargos.cs" />
+    <Compile Include="Models\Hotel\CE_Direccion.cs" />
+    <Compile Include="Models\Hotel\CE_Habitacion.cs" />
+    <Compile Include="Models\Hotel\CE_Hotel.cs" />
+    <Compile Include="Models\Hotel\CE_HotelPTA.cs" />
+    <Compile Include="Models\Hotel\CE_ImpuestoHotel.cs" />
+    <Compile Include="Models\Hotel\CE_ImpuestoTotal.cs" />
+    <Compile Include="Models\Hotel\CE_InformacionAdicional.cs" />
+    <Compile Include="Models\Hotel\CE_InformacionReserva.cs" />
+    <Compile Include="Models\Hotel\CE_Item.cs" />
+    <Compile Include="Models\Hotel\CE_PasajeroHotel.cs" />
+    <Compile Include="Models\Hotel\CE_PrecioTotal.cs" />
+    <Compile Include="Models\Hotel\CE_PrecioHabitacion.cs" />
+    <Compile Include="Models\Hotel\CE_DetalleReserva.cs" />
+    <Compile Include="Models\Hotel\CE_PrecioTotalHotel.cs" />
+    <Compile Include="Models\Hotel\CE_Remark.cs" />
+    <Compile Include="Models\Hotel\CE_RemarkLine.cs" />
+    <Compile Include="Models\Hotel\CE_ReservaHotel.cs" />
+    <Compile Include="Models\Hotel\CE_SegmentoHotel.cs" />
+    <Compile Include="Models\Hotel\CE_TipoHabitacion.cs" />
+    <Compile Include="Models\Hotel\CE_TotalImpuestos.cs" />
+    <Compile Include="Models\Hotel\RQ_SegmentoConfirmado.cs" />
+    <Compile Include="Models\Hotel\RQ_SegmentoConfirmadoHotel.cs" />
+    <Compile Include="Models\Hotel\RQ_SegmentoGK.cs" />
+    <Compile Include="Models\Hotel\RQ_SegmentoHotelBase.cs" />
+    <Compile Include="Models\Hotel\TipoRemark.cs" />
+    <Compile Include="Models\Incidencia\CE_BitacoraCC.cs" />
+    <Compile Include="Models\Incidencia\CE_UsuarioWeb.cs" />
+    <Compile Include="Models\Itinerario\RQ_ActualizarPasajeros.cs" />
+    <Compile Include="Models\Itinerario\RQ_AnadirServicioEspecial.cs" />
+    <Compile Include="Models\Itinerario\RQ_PnrCancel.cs" />
+    <Compile Include="Models\Itinerario\RQ_DesplegarSegmento.cs" />
+    <Compile Include="Models\Itinerario\RQ_ObtenerCotizaciones.cs" />
+    <Compile Include="Models\Itinerario\RQ_ObtenerReserva.cs" />
+    <Compile Include="Models\Reglas\CE_ReglaEmision.cs" />
+    <Compile Include="Models\Robot\BoletosOADP\CE_TurboPassengerReceipt.cs" />
+    <Compile Include="Models\Robot\CE_PseudoGDS.cs" />
+    <Compile Include="Models\Robot\RQ_AnulaBoletoPTA.cs" />
+    <Compile Include="Models\Servicio\RQ_SendEmailMessage.cs" />
+    <Compile Include="Models\Servicio\RQ_SendShortMessage.cs" />
+    <Compile Include="Models\ComisionFeePta\CE_ComisionPta.cs" />
+    <Compile Include="Models\ComisionFeePta\CE_ComisionPtaAdicional.cs" />
+    <Compile Include="Models\ComisionFeePta\CE_FeePta.cs" />
+    <Compile Include="Models\Facturacion\CE_FacturaCabecera.cs" />
+    <Compile Include="Models\Facturacion\CE_Facturacion.cs" />
+    <Compile Include="Models\Boleto\CE_Boleto.cs" />
+    <Compile Include="Models\Facturacion\CE_FacturaCliente.cs" />
+    <Compile Include="Models\Facturacion\CE_Interface.cs" />
+    <Compile Include="Models\Facturacion\CE_InterfaceProveedor.cs" />
+    <Compile Include="Models\Facturacion\CE_LineaContable.cs" />
+    <Compile Include="Models\Facturacion\CE_SecuenciaReferencia.cs" />
+    <Compile Include="Models\Emnumeraciones.cs" />
+    <Compile Include="Models\Facturacion\CE_InterfaceDetalle.cs" />
+    <Compile Include="Models\Facturacion\RQ_ObtenerInterfaceProveedor.cs" />
+    <Compile Include="Models\FormaPago\CE_FormaPago.cs" />
+    <Compile Include="Models\General\CE_Agente.cs" />
+    <Compile Include="Models\General\CE_ServicioEspecial.cs" />
+    <Compile Include="Models\Facturacion\CE_InterfaceGeneral.cs" />
+    <Compile Include="Models\InternalException.cs" />
+    <Compile Include="Models\Queue\CE_QueueAccess.cs" />
+    <Compile Include="Models\Queue\CE_QueueReserva.cs" />
+    <Compile Include="Models\Queue\RQ_QueueAccess.cs" />
+    <Compile Include="Models\Reglas\RQ_ObtenerReglasEmision.cs" />
+    <Compile Include="Models\Reporte\BoletosEmitidos\CE_ReporteVenta.cs" />
+    <Compile Include="Models\Reporte\BoletosEmitidos\CE_ReporteVenta_Cabecera.cs" />
+    <Compile Include="Models\Reporte\BoletosEmitidos\CE_ReporteVenta_Emision.cs" />
+    <Compile Include="Models\Reporte\BoletosEmitidos\RQ_ObtenerReporteVentas.cs" />
+    <Compile Include="Models\Robot\BoletoPendientePago\RQ_ObtenerBoletosPendientesPago.cs" />
+    <Compile Include="Models\Robot\BoletoPendientePago\RQ_ObtenerBoletosSinergia.cs" />
+    <Compile Include="Models\Robot\BoletosOADP\RQ_InsertaCuerpoOADP.cs" />
+    <Compile Include="Models\Robot\CE_BoletoFacturado.cs" />
+    <Compile Include="Models\Robot\CE_BoletoSinergia.cs" />
+    <Compile Include="Models\General\CE_Aerolinea.cs" />
+    <Compile Include="Models\General\CE_Aplicacion.cs" />
+    <Compile Include="Models\General\CE_BaseTarifaria.cs" />
+    <Compile Include="Models\General\CE_Ciudad.cs" />
+    <Compile Include="Models\General\CE_Cliente.cs" />
+    <Compile Include="Models\General\CE_Cotizacion.cs" />
+    <Compile Include="Models\General\CE_Impuesto.cs" />
+    <Compile Include="Models\General\CE_Itinerario.cs" />
+    <Compile Include="Models\General\CE_Pasajero.cs" />
+    <Compile Include="Models\General\CE_Reserva.cs" />
+    <Compile Include="Models\General\CE_Segmento.cs" />
+    <Compile Include="Models\General\CE_Tarifa.cs" />
+    <Compile Include="Models\General\CE_TipoPasajero.cs" />
+    <Compile Include="Models\General\CE_TipoTarifa.cs" />
+    <Compile Include="Models\General\CE_Usuario.cs" />
+    <Compile Include="Models\Solicitudes\RQ_TarjetaCreditoSolicitud.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletBase.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletDeleteRQ.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletDeleteRS.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletDetailRQ.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletDetailRS.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletGenerateRQ.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletGenerateRS.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletListRQ.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletListRS.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletUpdateRQ.cs" />
+    <Compile Include="Models\TarjetaCredito\B2BWallet\B2BWalletUpdateRS.cs" />
+    <Compile Include="Models\TarjetaCredito\CE_DetalleTarjetaWeb.cs" />
+    <Compile Include="Models\TarjetaCredito\CE_EvaluacionTarjetaPTA.cs" />
+    <Compile Include="Models\TarjetaCredito\CE_EmisionB2B.cs" />
+    <Compile Include="Models\TarjetaCredito\CE_SessionB2BWallet.cs" />
+    <Compile Include="Models\TarjetaCredito\DT_MPC_EVALUACION.cs" />
+    <Compile Include="Models\TarjetaCredito\RQ_ActualizacionTarjetaB2B.cs" />
+    <Compile Include="Models\TarjetaCredito\RQ_ActualizacionTarjetaB2b_Boleto.cs" />
+    <Compile Include="Models\TarjetaCredito\RQ_ObtenerReglasTarjetaPTA.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Base\Request\Amadeus\" />
+    <Folder Include="Models\Base\Request\Kiu\" />
+    <Folder Include="Models\Base\Response\Amadeus\" />
+    <Folder Include="Models\Base\Response\Kiu\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

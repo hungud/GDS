@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml name="AmadeusWebService" id="AmadeusWebService" type="text/xml">
+  <WebService Id="0">
+    <Request>
+      <Command>B2BWalletGenerate</Command>
+      <ConsumerID>1</ConsumerID>
+      <Message>
+        <Data>
+          <MessageID></MessageID>
+          <VendorCode></VendorCode>                  <!-- CA/? -->
+          <Amount></Amount>
+          <DecimalPlaces>2</DecimalPlaces>
+          <CurrencyCode>USD</CurrencyCode>           <!-- USD/EUR -->
+          <MaximumTransaction>1</MaximumTransaction>
+          <EndDate></EndDate>                        <!-- "YYYY-MM-DD" -->
+        </Data>
+      </Message>
+    </Request>
+  </WebService>
+  <WebService Id="1">
+    <Request>
+      <Command>B2BWalletDetail</Command>
+      <ConsumerID>1</ConsumerID>
+      <Message>
+        <Data>
+          <MessageID></MessageID>
+          <!--
+          <Reference Type="External"></Reference>
+          <Reference Type="Amadeus"></Reference>
+          -->
+          <Display Full="true"/>                     <!-- true/false -->
+        </Data>
+      </Message>
+    </Request>
+  </WebService>
+  <WebService Id="2">
+    <Request>
+      <Command>B2BWalletUpdate</Command>
+      <ConsumerID>1</ConsumerID>
+      <Message>
+        <Data>
+          <MessageID></MessageID>
+          <!--
+          <Reference Type="External"></Reference>
+          <Reference Type="Amadeus"></Reference>
+          -->
+          <Comment></Comment>
+        </Data>
+      </Message>
+    </Request>
+  </WebService>
+  <WebService Id="3">
+    <Request>
+      <Command>B2BWalletDelete</Command>
+      <ConsumerID>1</ConsumerID>
+      <Message>
+        <Data>
+          <!--
+          <Reference Type="External"></Reference>
+          <Reference Type="Amadeus"></Reference>
+          -->
+          <Comment></Comment>
+        </Data>
+      </Message>
+    </Request>
+  </WebService>
+  <WebService Id="4">
+    <Request>
+      <Command>B2BWalletList</Command>
+      <ConsumerID>1</ConsumerID>
+      <Message>
+        <Data>
+          <MessageID></MessageID>
+          <Type></Type>                              <!-- Prepaid/? -->
+          <VendorCode></VendorCode>                  <!-- CA/? -->
+          <Period Start="" End="" />                 <!-- "YYYY-MM-DD" -->
+          <AmountRange Min="" Max="" />
+          <CurrencyCode>USD</CurrencyCode>           <!-- USD/EUR -->
+          <CardStatus></CardStatus>                  <!-- Active/? -->
+        </Data>
+      </Message>
+    </Request>
+  </WebService>
+</xml>

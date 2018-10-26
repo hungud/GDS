@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEC9FBED-98CD-429E-A2A4-8F1533EFE10D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseDatosLib</RootNamespace>
+    <AssemblyName>BaseDatosLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreDaoLib">
+      <HintPath>..\..\Dependencias\CoreDaoLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreLib">
+      <HintPath>..\..\Dependencias\CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreWebLib, Version=1.26.12.17, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\CoreWebLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomLog">
+      <HintPath>..\..\Dependencias\CustomLog.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\3eros\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\3eros\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime">
+      <HintPath>..\..\Dependencias\3eros\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.102.2.20, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\3eros\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="OracleLib, Version=1.5.12.17, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\OracleLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XperiCode.Impersonator">
+      <HintPath>..\..\Dependencias\3eros\XperiCode.Impersonator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Base\Common.cs" />
+    <Compile Include="Code\PaquetesWeb\PkgGdsModuloIncidenciasWeb.cs" />
+    <Compile Include="Code\PaquetesWeb\PkgGdsSesionB2BWallet.cs" />
+    <Compile Include="Code\Paquetes\GdsIntegracionM.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsAnulacion.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsGeneral.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsHotelesCC.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsModuloIncidencias.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsReglasEmision.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsGeneric.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsModuloComisionPta.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsModuloNoPublikdasPta.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsModuloPnrPta.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsRobotAnulaciones.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsRobotBoletos.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsSabreRed.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsSolicitudes.cs" />
+    <Compile Include="Code\Paquetes\PkgGdsTarjetasCreditoPta.cs" />
+    <Compile Include="Code\Paquetes\PkgPermisos.cs" />
+    <Compile Include="Code\Procedimientos\SpMpcConceptosTarjetaCred.cs" />
+    <Compile Include="Code\Procedimientos\SpMpcEvaluaTarjetaCred.cs" />
+    <Compile Include="Code\Procedimientos\UpConceptosTarifaBulk.cs" />
+    <Compile Include="Code\Procedimientos\UpConceptosTourcodes.cs" />
+    <Compile Include="Code\Procedimientos\UpGetInterfaceNumeracion.cs" />
+    <Compile Include="Code\Procedimientos\UpTarifaBulkEvaluacion .cs" />
+    <Compile Include="Code\Procedimientos\UpTourcodeEvaluacionV2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Paquetes\PKG_GDS_HOTELES_CC.SQL" />
+    <Content Include="Scripts\Paquetes\PKG_GDS_MODULO_INCIDENCIAS.SQL" />
+    <Content Include="Scripts\Paquetes\PKG_GDS_REGLAS_EMISION.SQL" />
+    <Content Include="Scripts\Paquetes\PKG_GDS_MODULO_NOPUBLIKDAS_PTA.SQL" />
+    <Content Include="Scripts\Paquetes\PKG_GDS_ROBOT_BOLETOS.SQL" />
+    <Content Include="Scripts\Paquetes\PKG_GDS_GENERIC.SQL" />
+    <Content Include="Scripts\Tablas\GDS_INTERFACE_PROVEEDOR.SQL" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Paquetes\PKG_GDS_MODULO_COMISION_PTA.SQL" />
+    <None Include="Scripts\Paquetes\PKG_GDS_MODULO_PNR_PTA.SQL" />
+    <None Include="Scripts\Paquetes\PKG_GDS_ROBOT_ANULACIONES.SQL" />
+    <None Include="Scripts\Paquetes\PKG_GDS_TARJETAS_CREDITO_PTA.SQL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\EntidadesGDS\EntidadesGDS.csproj">
+      <Project>{02be47a3-94ce-456f-a441-b0e6270add93}</Project>
+      <Name>EntidadesGDS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

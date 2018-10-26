@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fbc6c553-ea33-49c9-800d-ae68df1d6a3f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/SabreCommandLLS1.8.1RQ.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xlink.xsd" MetadataType="Schema" ID="e322a0a2-0e87-450c-b203-00e2734c7cc0" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/xlink.xsd" />
+    <MetadataFile FileName="wsse.xsd" MetadataType="Schema" ID="14716309-abea-44ea-9175-3467b591fb70" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/wsse.xsd" />
+    <MetadataFile FileName="xml.xsd" MetadataType="Schema" ID="c7bfe602-b32d-424d-91f2-6ea644448eca" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/xml.xsd" />
+    <MetadataFile FileName="SabreCommandLLS1.xsd" MetadataType="Schema" ID="1d7c6062-1dc1-4957-bb3a-1bcce9265c7b" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/SabreCommandLLS1.8.1RS.xsd" />
+    <MetadataFile FileName="SabreCommandLLS11.xsd" MetadataType="Schema" ID="410b7585-3ba4-4ae6-89b3-f9b5c52543c2" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/SabreCommandLLS1.8.1RQRS.xsd" />
+    <MetadataFile FileName="SabreCommandLLS12.xsd" MetadataType="Schema" ID="b4edd3b2-4add-44a6-b4d8-899dfd983357" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/SabreCommandLLS1.8.1RQ.xsd" />
+    <MetadataFile FileName="msg-header-2_0.xsd" MetadataType="Schema" ID="8a1ce696-cdd7-41e7-9b74-673f38f299ac" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/msg-header-2_0.xsd" />
+    <MetadataFile FileName="SabreCommandLLS1.wsdl" MetadataType="Wsdl" ID="e3e6aa5d-f1b1-4ea2-96a9-c3b65ecbecd0" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/SabreCommandLLS1.8.1RQ.wsdl" />
+    <MetadataFile FileName="envelope.xsd" MetadataType="Schema" ID="2d20d1d7-eae8-449d-8abb-24a9ad35a89a" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/envelope.xsd" />
+    <MetadataFile FileName="xmldsig-core-schema.xsd" MetadataType="Schema" ID="430a4c96-c224-4afd-b219-5cab741b9a4e" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/xmldsig-core-schema.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

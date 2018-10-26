@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1EF83C4-A7D6-4862-818B-DFB799E7422A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AmadeusLib</RootNamespace>
+    <AssemblyName>AmadeusLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreLib, Version=1.23.11.17, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dependencias\CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreWebLib">
+      <HintPath>..\..\..\Dependencias\CoreWebLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomLog">
+      <HintPath>..\..\..\Dependencias\CustomLog.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Dependencias\3eros\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dependencias\3eros\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime">
+      <HintPath>..\..\..\Dependencias\3eros\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XperiCode.Impersonator">
+      <HintPath>..\..\..\Dependencias\3eros\XperiCode.Impersonator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Air\AirSellFromRecommendation.cs" />
+    <Compile Include="Code\B2B\B2BWallet.cs" />
+    <Compile Include="Code\Base\AmadeusUtility.cs" />
+    <Compile Include="Code\Base\Common.cs" />
+    <Compile Include="Code\DocIssuance\DocIssuanceIssueTicket.cs" />
+    <Compile Include="Code\Fare\FareInstantTravelBoardSearch.cs" />
+    <Compile Include="Code\Fare\FareMasterPricerTravelBoardSearch.cs" />
+    <Compile Include="Code\Fare\FarePricePNRWithBookingClass.cs" />
+    <Compile Include="Code\Herramientas\CommandCryptic.cs" />
+    <Compile Include="Code\PNR\PnrAddMultiElements.cs" />
+    <Compile Include="Code\PNR\PnrCancel.cs" />
+    <Compile Include="Code\PNR\PnrRetrieve.cs" />
+    <Compile Include="Code\SalesReportDisplayQueryReport.cs" />
+    <Compile Include="Code\Ticket\TicketCancelDocument.cs" />
+    <Compile Include="Code\Ticket\TicketCheckEligibility.cs" />
+    <Compile Include="Code\Ticket\TicketCreateTSTFromPricing.cs" />
+    <Compile Include="Code\Ticket\TicketDisplayTST.cs" />
+    <Compile Include="Code\Ticket\TicketProcessETicket.cs" />
+    <Compile Include="Code\Ticket\TicketReissueConfirmedPricing.cs" />
+    <Compile Include="Code\Ticket\TicketRepricePNRWithBookingClass.cs" />
+    <Compile Include="Code\Utiles\Ambiente.cs" />
+    <Compile Include="Code\Utiles\Configuracion.cs" />
+    <Compile Include="Code\Utiles\B2BServiceFileValueAmadeus.cs" />
+    <Compile Include="Code\Utiles\DateStringAmadeus.cs" />
+    <Compile Include="Code\Utiles\WebServiceFileValueAmadeus.cs" />
+    <Compile Include="Models\AmadeusCredential.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Amadeus_B2BWallet_1AWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios\Air_SellFromRecommendation\Request\Air_SellFromRecommendation.cs" />
+    <Compile Include="Servicios\Air_SellFromRecommendation\Response\Air_SellFromRecommendationReply.cs" />
+    <Compile Include="Servicios\Command_Cryptic\Request\CommandCryptic.cs" />
+    <Compile Include="Servicios\Command_Cryptic\Response\CommandCrypticReply.cs" />
+    <Compile Include="Servicios\DocIssuance_IssueTicket\Request\DocIssuance_IssueTicket.cs" />
+    <Compile Include="Servicios\DocIssuance_IssueTicket\Response\DocIssuance_IssueTicketReply.cs" />
+    <Compile Include="Servicios\Fare_InstantTravelBoardSearch\Request\Fare_InstantTravelBoardSearch.cs" />
+    <Compile Include="Servicios\Fare_InstantTravelBoardSearch\Response\Fare_InstantTravelBoardSearchReply.cs" />
+    <Compile Include="Servicios\Fare_MasterPricerTravelBoardSearch\Request\Fare_MasterPricerTravelBoardSearch.cs" />
+    <Compile Include="Servicios\Fare_MasterPricerTravelBoardSearch\Response\Fare_MasterPricerTravelBoardSearchReply.cs" />
+    <Compile Include="Servicios\Fare_PricePNRWithBookingClass\Request\Fare_PricePNRWithBookingClass.cs" />
+    <Compile Include="Servicios\Fare_PricePNRWithBookingClass\Response\Fare_PricePNRWithBookingClassReply.cs" />
+    <Compile Include="Servicios\PNR_AddMultiElements\Request\PNR_AddMultiElements.cs" />
+    <Compile Include="Servicios\PNR_Cancel\Request\PNR_Cancel.cs" />
+    <Compile Include="Servicios\PNR_Reply\Response\PNR_Reply.cs" />
+    <Compile Include="Servicios\PNR_Retrieve\Request\PNR_Retrieve.cs" />
+    <Compile Include="Servicios\SalesReports_DisplayQueryReport\Request\SalesReports_DisplayQueryReport.cs" />
+    <Compile Include="Servicios\SalesReports_DisplayQueryReport\Response\SalesReports_DisplayQueryReportReply.cs" />
+    <Compile Include="Servicios\Ticket_CancelDocument\Request\Ticket_CancelDocument.cs" />
+    <Compile Include="Servicios\Ticket_CancelDocument\Response\Ticket_CancelDocumentReply.cs" />
+    <Compile Include="Servicios\Ticket_CheckEligibility\Request\Ticket_CheckEligibility.cs" />
+    <Compile Include="Servicios\Ticket_CheckEligibility\Response\TicketCheckEligibilityReply.cs" />
+    <Compile Include="Servicios\Ticket_CreateTSTFromPricing\Request\Ticket_CreateTSTFromPricing.cs" />
+    <Compile Include="Servicios\Ticket_CreateTSTFromPricing\Response\Ticket_CreateTSTFromPricingReply.cs" />
+    <Compile Include="Servicios\Ticket_DispalyTST\Request\Ticket_DispalyTST.cs" />
+    <Compile Include="Servicios\Ticket_DispalyTST\Response\Ticket_DispalyTSTReply.cs" />
+    <Compile Include="Servicios\Ticket_ProcessETicket\Request\Ticket_ProcessETicket.cs" />
+    <Compile Include="Servicios\Ticket_ProcessETicket\Response\Ticket_ProcessETicketReply.cs" />
+    <Compile Include="Servicios\Ticket_ReissueConfirmedPricing\Request\Ticket_ReissueConfirmedPricing.cs" />
+    <Compile Include="Servicios\Ticket_ReissueConfirmedPricing\Response\Ticket_ReissueConfirmedPricingReply.cs" />
+    <Compile Include="Servicios\Ticket_RepricePNRWithBookingClass\Request\Ticket_RepricePNRWithBookingClass.cs" />
+    <Compile Include="Servicios\Ticket_RepricePNRWithBookingClass\Response\Ticket_RepricePNRWithBookingClassReply.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AmadeusB2BService.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AmadeusWebService.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Servicios\Documentacion.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AmadeusLib.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config" />
+    <None Include="Service References\Amadeus_B2BWallet_1AWS\B2BWallet_1AWS.wsdl" />
+    <None Include="Service References\Amadeus_B2BWallet_1AWS\B2BWallet_1AWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Amadeus_B2BWallet_1AWS\B2BWallet_1AWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Amadeus_B2BWallet_1AWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Amadeus_B2BWallet_1AWS\B2BWallet_1AWS.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Amadeus_B2BWallet_1AWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Amadeus_B2BWallet_1AWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Amadeus_B2BWallet_1AWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Amadeus\AmadeusLATAM.B2BWallet.Amadeus\AmadeusLATAM.B2BWallet.Amadeus.csproj">
+      <Project>{8d47abcb-c5b7-49c4-a642-cbf5a57a6db2}</Project>
+      <Name>AmadeusLATAM.B2BWallet.Amadeus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Amadeus\AmadeusLATAM.B2BWallet.Common\AmadeusLATAM.B2BWallet.Common.csproj">
+      <Project>{243b1c7c-2102-4225-be76-462b2ed2afab}</Project>
+      <Name>AmadeusLATAM.B2BWallet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Amadeus\AmadeusLATAM.B2BWallet.Core\AmadeusLATAM.B2BWallet.Core.csproj">
+      <Project>{535decd7-9d5b-4377-9963-2b76b70d7f5a}</Project>
+      <Name>AmadeusLATAM.B2BWallet.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Entidades\EntidadesGDS\EntidadesGDS.csproj">
+      <Project>{02be47a3-94ce-456f-a441-b0e6270add93}</Project>
+      <Name>EntidadesGDS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,15 @@
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\ConsoleTest.exe
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\ConsoleTest.pdb
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\CoreLib.dll
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\CoreWebLib.dll
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\CustomLog.dll
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\EntidadesGDS.dll
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\log4net.dll
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\Newtonsoft.Json.dll
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\RepositorioWebApi.dll
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\XperiCode.Impersonator.dll
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\bin\Debug\EntidadesGDS.pdb
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\obj\Debug\ConsoleTest.exe
+D:\Proyectos\GDS_ServicioGDS\ConsoleTest\obj\Debug\ConsoleTest.pdb

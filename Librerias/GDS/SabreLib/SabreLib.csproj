@@ -1,0 +1,1762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C6C7E8A-F89A-4803-8E62-603EA30E1F0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SabreLib</RootNamespace>
+    <AssemblyName>SabreLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreLib">
+      <HintPath>..\..\..\Dependencias\CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreWebLib">
+      <HintPath>..\..\..\Dependencias\CoreWebLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomLog">
+      <HintPath>..\..\..\Dependencias\CustomLog.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Dependencias\3eros\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dependencias\3eros\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime">
+      <HintPath>..\..\..\Dependencias\3eros\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XperiCode.Impersonator">
+      <HintPath>..\..\..\Dependencias\3eros\XperiCode.Impersonator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\AirTicket\AirTicket.cs" />
+    <Compile Include="Code\AirTicket\EnhancedAirTicket.cs" />
+    <Compile Include="Code\AutomatedExchanges.cs" />
+    <Compile Include="Code\Base\Common.cs" />
+    <Compile Include="Code\Base\SabreUtility.cs" />
+    <Compile Include="Code\DailySalesReport.cs" />
+    <Compile Include="Code\Herramientas\ContextChange.cs" />
+    <Compile Include="Code\Herramientas\SabreCommand.cs" />
+    <Compile Include="Code\Herramientas\DesignatePrinter.cs" />
+    <Compile Include="Code\Herramientas\SessionClose.cs" />
+    <Compile Include="Code\Herramientas\SessionCreate.cs" />
+    <Compile Include="Code\lItinerary\Arunk.cs" />
+    <Compile Include="Code\lItinerary\GetReservation.cs" />
+    <Compile Include="Code\lItinerary\SpecialService.cs" />
+    <Compile Include="Code\lItinerary\TicketCoupon.cs" />
+    <Compile Include="Code\lItinerary\TravelItineraryModifyInfo.cs" />
+    <Compile Include="Code\lItinerary\TravelItineraryRead.cs" />
+    <Compile Include="Code\Queue\QueueAccess.cs" />
+    <Compile Include="Code\Queue\QueueAnalysis.cs" />
+    <Compile Include="Code\Queue\QueueCount.cs" />
+    <Compile Include="Code\Queue\QueuePlace.cs" />
+    <Compile Include="Code\Remark\AddRemark.cs" />
+    <Compile Include="Code\Remark\ModifyRemark.cs" />
+    <Compile Include="Code\Transaction\EndTransaction.cs" />
+    <Compile Include="Code\Transaction\IgnoreTransaction.cs" />
+    <Compile Include="Code\Utiles\Ambiente.cs" />
+    <Compile Include="Code\Utiles\Configuracion.cs" />
+    <Compile Include="Code\Utiles\DateStringSabre.cs" />
+    <Compile Include="Code\Utiles\WebServiceFileValueSabre.cs" />
+    <Compile Include="Code\AirPrice.cs" />
+    <Compile Include="Models\SabreCredential.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Sabre_AddRemarkLLS_211\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_AirPriceLLS_216\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_AirTicketLLS_210\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_ArunkLLS_202\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_AutomatedExchangesLLS_261\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_ContextChangeLLS_203\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_DailySalesReportLLS_200\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_DesignatePrinterLLS201\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_DisplayPriceQuoteLLS_251\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_EndTransactionLLS_207\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_EnhancedAirTicket_120\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_eTicketCouponLLS_200\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_GetReservation_1170\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_IgnoreTransactionLLS_200\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_ModifyRemarkLLS_212\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_QueueAccessLLS_208\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_QueueAnalysisLLS_200\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_QueueCountLLS_220\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_QueuePlaceLLS_204\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_SabreCommandLLS_181\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_SessionClose_101\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_SessionCreate_100\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_SpecialServiceLLS_221\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Sabre_TravelItineraryReadRQ_310\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="SabreLib.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\Sabre_AddRemarkLLS_211\AddRemarkLLS2.wsdl" />
+    <None Include="Service References\Sabre_AddRemarkLLS_211\AddRemarkLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\AddRemarkLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\AddRemarkLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\SabreLib.Sabre_AddRemarkLLS_211.AddRemarkRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\SabreLib.Sabre_AddRemarkLLS_211.AddRemarkRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\SabreLib.Sabre_AddRemarkLLS_211.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\SabreLib.Sabre_AddRemarkLLS_211.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\OTA_AirPriceLLS2.wsdl" />
+    <None Include="Service References\Sabre_AirPriceLLS_216\OTA_AirPriceLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\OTA_AirPriceLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\OTA_AirPriceLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\SabreLib.Sabre_AirPriceLLS_216.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\SabreLib.Sabre_AirPriceLLS_216.OTA_AirPriceRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\SabreLib.Sabre_AirPriceLLS_216.OTA_AirPriceRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\SabreLib.Sabre_AirPriceLLS_216.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\AirTicketLLS2.wsdl" />
+    <None Include="Service References\Sabre_AirTicketLLS_210\AirTicketLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\AirTicketLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\AirTicketLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\SabreLib.Sabre_AirTicketLLS_210.AirTicketRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\SabreLib.Sabre_AirTicketLLS_210.AirTicketRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\SabreLib.Sabre_AirTicketLLS_210.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\SabreLib.Sabre_AirTicketLLS_210.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AirTicketLLS_210\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\ARUNK_LLS2.wsdl" />
+    <None Include="Service References\Sabre_ArunkLLS_202\ARUNK_LLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\ARUNK_LLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\ARUNK_LLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\SabreLib.Sabre_ArunkLLS_202.ARUNK_RQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\SabreLib.Sabre_ArunkLLS_202.ARUNK_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\SabreLib.Sabre_ArunkLLS_202.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\SabreLib.Sabre_ArunkLLS_202.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ArunkLLS_202\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\AutomatedExchangesLLS2.wsdl" />
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\AutomatedExchangesLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\AutomatedExchangesLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\AutomatedExchangesLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\SabreLib.Sabre_AutomatedExchangesLLS_261.AutomatedExchangesRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\SabreLib.Sabre_AutomatedExchangesLLS_261.AutomatedExchangesRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\SabreLib.Sabre_AutomatedExchangesLLS_261.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\SabreLib.Sabre_AutomatedExchangesLLS_261.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\ContextChangeLLS2.wsdl" />
+    <None Include="Service References\Sabre_ContextChangeLLS_203\ContextChangeLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\ContextChangeLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\ContextChangeLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\SabreLib.Sabre_ContextChangeLLS_203.ContextChangeRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\SabreLib.Sabre_ContextChangeLLS_203.ContextChangeRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\SabreLib.Sabre_ContextChangeLLS_203.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\SabreLib.Sabre_ContextChangeLLS_203.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\DailySalesReportLLS2.wsdl" />
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\DailySalesReportLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\DailySalesReportLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\DailySalesReportLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\SabreLib.Sabre_DailySalesReportLLS_200.DailySalesReportRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\SabreLib.Sabre_DailySalesReportLLS_200.DailySalesReportRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\SabreLib.Sabre_DailySalesReportLLS_200.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\SabreLib.Sabre_DailySalesReportLLS_200.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\DesignatePrinterLLS2.wsdl" />
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\DesignatePrinterLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\DesignatePrinterLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\DesignatePrinterLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\SabreLib.Sabre_DesignatePrinterLLS201.DesignatePrinterRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\SabreLib.Sabre_DesignatePrinterLLS201.DesignatePrinterRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\SabreLib.Sabre_DesignatePrinterLLS201.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\SabreLib.Sabre_DesignatePrinterLLS201.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\DisplayPriceQuoteLLS2.wsdl" />
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\DisplayPriceQuoteLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\DisplayPriceQuoteLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\DisplayPriceQuoteLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\SabreLib.Sabre_DisplayPriceQuoteLLS_251.DisplayPriceQuoteRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\SabreLib.Sabre_DisplayPriceQuoteLLS_251.DisplayPriceQuoteRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\SabreLib.Sabre_DisplayPriceQuoteLLS_251.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\SabreLib.Sabre_DisplayPriceQuoteLLS_251.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\EndTransactionLLS2.wsdl" />
+    <None Include="Service References\Sabre_EndTransactionLLS_207\EndTransactionLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\EndTransactionLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\EndTransactionLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\SabreLib.Sabre_EndTransactionLLS_207.EndTransactionRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\SabreLib.Sabre_EndTransactionLLS_207.EndTransactionRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\SabreLib.Sabre_EndTransactionLLS_207.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\SabreLib.Sabre_EndTransactionLLS_207.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\AirTicket1.wsdl" />
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\AirTicket1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\AirTicket11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\AirTicket12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\SabreLib.Sabre_EnhancedAirTicket_120.AirTicketRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\SabreLib.Sabre_EnhancedAirTicket_120.AirTicketRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\SabreLib.Sabre_EnhancedAirTicket_120.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\SabreLib.Sabre_EnhancedAirTicket_120.Security.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\SpCommonSimpleTypes_v3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\STL2_MsgCommon_v02_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\STL2_Payload_v02_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\eTicketCouponLLS2.wsdl" />
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\eTicketCouponLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\eTicketCouponLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\eTicketCouponLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\SabreLib.Sabre_eTicketCouponLLS_200.eTicketCouponRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\SabreLib.Sabre_eTicketCouponLLS_200.eTicketCouponRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\SabreLib.Sabre_eTicketCouponLLS_200.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\SabreLib.Sabre_eTicketCouponLLS_200.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\Air.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\Ancillaries.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\GetReservationSTLRQ_v1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\GetReservationSTLRS_v1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\GetReservationWSDL.wsdl" />
+    <None Include="Service References\Sabre_GetReservation_1170\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\OpenReservation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\PNRBuilderTypes_v1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\Pricing.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\SabreLib.Sabre_GetReservation_1170.GetReservationOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\SabreLib.Sabre_GetReservation_1170.GetReservationRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\SabreLib.Sabre_GetReservation_1170.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\SabreLib.Sabre_GetReservation_1170.Security.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_GetReservation_1170\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\IgnoreTransactionLLS2.wsdl" />
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\IgnoreTransactionLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\IgnoreTransactionLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\IgnoreTransactionLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\SabreLib.Sabre_IgnoreTransactionLLS_200.IgnoreTransactionRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\SabreLib.Sabre_IgnoreTransactionLLS_200.IgnoreTransactionRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\SabreLib.Sabre_IgnoreTransactionLLS_200.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\SabreLib.Sabre_IgnoreTransactionLLS_200.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\ModifyRemarkLLS2.wsdl" />
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\ModifyRemarkLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\ModifyRemarkLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\ModifyRemarkLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\SabreLib.Sabre_ModifyRemarkLLS_212.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\SabreLib.Sabre_ModifyRemarkLLS_212.ModifyRemarkRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\SabreLib.Sabre_ModifyRemarkLLS_212.ModifyRemarkRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\SabreLib.Sabre_ModifyRemarkLLS_212.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\QueueAccessLLS2.wsdl" />
+    <None Include="Service References\Sabre_QueueAccessLLS_208\QueueAccessLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\QueueAccessLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\QueueAccessLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\SabreLib.Sabre_QueueAccessLLS_208.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\SabreLib.Sabre_QueueAccessLLS_208.QueueAccessRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\SabreLib.Sabre_QueueAccessLLS_208.QueueAccessRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\SabreLib.Sabre_QueueAccessLLS_208.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\QueueAnalysisLLS2.wsdl" />
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\QueueAnalysisLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\QueueAnalysisLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\QueueAnalysisLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\SabreLib.Sabre_QueueAnalysisLLS_200.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\SabreLib.Sabre_QueueAnalysisLLS_200.QueueAnalysisRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\SabreLib.Sabre_QueueAnalysisLLS_200.QueueAnalysisRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\SabreLib.Sabre_QueueAnalysisLLS_200.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\QueueCountLLS2.wsdl" />
+    <None Include="Service References\Sabre_QueueCountLLS_220\QueueCountLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\QueueCountLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\QueueCountLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\SabreLib.Sabre_QueueCountLLS_220.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\SabreLib.Sabre_QueueCountLLS_220.QueueCountRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\SabreLib.Sabre_QueueCountLLS_220.QueueCountRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\SabreLib.Sabre_QueueCountLLS_220.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\QueuePlaceLLS2.wsdl" />
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\QueuePlaceLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\QueuePlaceLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\QueuePlaceLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\SabreLib.Sabre_QueuePlaceLLS_204.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\SabreLib.Sabre_QueuePlaceLLS_204.QueuePlaceRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\SabreLib.Sabre_QueuePlaceLLS_204.QueuePlaceRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\SabreLib.Sabre_QueuePlaceLLS_204.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\SabreCommandLLS1.wsdl" />
+    <None Include="Service References\Sabre_SabreCommandLLS_181\SabreCommandLLS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\SabreCommandLLS11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\SabreCommandLLS12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\SabreLib.Sabre_SabreCommandLLS_181.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\SabreLib.Sabre_SabreCommandLLS_181.SabreCommandLLSRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\SabreLib.Sabre_SabreCommandLLS_181.SabreCommandLLSRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\SabreLib.Sabre_SabreCommandLLS_181.Security.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\SabreLib.Sabre_SessionClose_101.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\SabreLib.Sabre_SessionClose_101.Security.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\SabreLib.Sabre_SessionClose_101.SessionCloseRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\SabreLib.Sabre_SessionClose_101.SessionCloseRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\SessionCloseRQ.wsdl" />
+    <None Include="Service References\Sabre_SessionClose_101\SessionCloseRQ.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\SessionCloseRQRS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\SessionCloseRS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionClose_101\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\SabreLib.Sabre_SessionCreate_100.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\SabreLib.Sabre_SessionCreate_100.Security.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\SabreLib.Sabre_SessionCreate_100.SessionCreateRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\SabreLib.Sabre_SessionCreate_100.SessionCreateRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\SessionCreateRQ.wsdl" />
+    <None Include="Service References\Sabre_SessionCreate_100\SessionCreateRQ.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\SessionCreateRQRS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\SessionCreateRS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SessionCreate_100\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\SabreLib.Sabre_SpecialServiceLLS_221.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\SabreLib.Sabre_SpecialServiceLLS_221.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\SabreLib.Sabre_SpecialServiceLLS_221.SpecialServiceRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\SabreLib.Sabre_SpecialServiceLLS_221.SpecialServiceRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\SpecialServiceLLS2.wsdl" />
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\SpecialServiceLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\SpecialServiceLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\SpecialServiceLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\SabreLib.Sabre_TravelItineraryModifyInfoLLS_211.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\SabreLib.Sabre_TravelItineraryModifyInfoLLS_211.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\SabreLib.Sabre_TravelItineraryModifyInfoLLS_211.TravelItineraryModifyInfoRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\SabreLib.Sabre_TravelItineraryModifyInfoLLS_211.TravelItineraryModifyInfoRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\sws_common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\TravelItineraryModifyInfoLLS2.wsdl" />
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\TravelItineraryModifyInfoLLS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\TravelItineraryModifyInfoLLS21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\TravelItineraryModifyInfoLLS22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\Air.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\Ancillaries.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\envelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\msg-header-2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\OpenReservation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\Pricing.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\SabreLib.Sabre_TravelItineraryReadRQ_310.MessageHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\SabreLib.Sabre_TravelItineraryReadRQ_310.Security1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\SabreLib.Sabre_TravelItineraryReadRQ_310.TravelItineraryReadRQResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\SabreLib.Sabre_TravelItineraryReadRQ_310.TravelItineraryReadRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\STL_For_SabreProtocol_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\STL_Header_v.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\TravelItineraryReadRQ3.wsdl" />
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\TravelItineraryReadRQ3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\TravelItineraryReadRQRS3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\TravelItineraryReadRS3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\wsse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\xlink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Sabre_AddRemarkLLS_211\" />
+    <WCFMetadataStorage Include="Service References\Sabre_AirPriceLLS_216\" />
+    <WCFMetadataStorage Include="Service References\Sabre_AirTicketLLS_210\" />
+    <WCFMetadataStorage Include="Service References\Sabre_ArunkLLS_202\" />
+    <WCFMetadataStorage Include="Service References\Sabre_AutomatedExchangesLLS_261\" />
+    <WCFMetadataStorage Include="Service References\Sabre_ContextChangeLLS_203\" />
+    <WCFMetadataStorage Include="Service References\Sabre_DailySalesReportLLS_200\" />
+    <WCFMetadataStorage Include="Service References\Sabre_DesignatePrinterLLS201\" />
+    <WCFMetadataStorage Include="Service References\Sabre_DisplayPriceQuoteLLS_251\" />
+    <WCFMetadataStorage Include="Service References\Sabre_EndTransactionLLS_207\" />
+    <WCFMetadataStorage Include="Service References\Sabre_EnhancedAirTicket_120\" />
+    <WCFMetadataStorage Include="Service References\Sabre_eTicketCouponLLS_200\" />
+    <WCFMetadataStorage Include="Service References\Sabre_GetReservation_1170\" />
+    <WCFMetadataStorage Include="Service References\Sabre_IgnoreTransactionLLS_200\" />
+    <WCFMetadataStorage Include="Service References\Sabre_ModifyRemarkLLS_212\" />
+    <WCFMetadataStorage Include="Service References\Sabre_QueueAccessLLS_208\" />
+    <WCFMetadataStorage Include="Service References\Sabre_QueueAnalysisLLS_200\" />
+    <WCFMetadataStorage Include="Service References\Sabre_QueueCountLLS_220\" />
+    <WCFMetadataStorage Include="Service References\Sabre_QueuePlaceLLS_204\" />
+    <WCFMetadataStorage Include="Service References\Sabre_SabreCommandLLS_181\" />
+    <WCFMetadataStorage Include="Service References\Sabre_SessionClose_101\" />
+    <WCFMetadataStorage Include="Service References\Sabre_SessionCreate_100\" />
+    <WCFMetadataStorage Include="Service References\Sabre_SpecialServiceLLS_221\" />
+    <WCFMetadataStorage Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\" />
+    <WCFMetadataStorage Include="Service References\Sabre_TravelItineraryReadRQ_310\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_AddRemarkLLS_211\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_AirTicketLLS_210\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_AirTicketLLS_210\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_AirTicketLLS_210\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_AutomatedExchangesLLS_261\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_DailySalesReportLLS_200\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_EndTransactionLLS_207\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_IgnoreTransactionLLS_200\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SabreCommandLLS_181\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_ContextChangeLLS_203\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SabreWebService.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Sabre_AirPriceLLS_216\configuration.svcinfo" />
+    <None Include="Service References\Sabre_AirPriceLLS_216\configuration91.svcinfo" />
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\configuration.svcinfo" />
+    <None Include="Service References\Sabre_QueuePlaceLLS_204\configuration91.svcinfo" />
+    <None Include="Service References\Sabre_QueueCountLLS_220\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Sabre_QueueCountLLS_220\configuration.svcinfo" />
+    <None Include="Service References\Sabre_QueueCountLLS_220\configuration91.svcinfo" />
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\configuration.svcinfo" />
+    <None Include="Service References\Sabre_QueueAnalysisLLS_200\configuration91.svcinfo" />
+    <None Include="Service References\Sabre_QueueAccessLLS_208\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Sabre_QueueAccessLLS_208\configuration.svcinfo" />
+    <None Include="Service References\Sabre_QueueAccessLLS_208\configuration91.svcinfo" />
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\configuration.svcinfo" />
+    <None Include="Service References\Sabre_DisplayPriceQuoteLLS_251\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_TravelItineraryModifyInfoLLS_211\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_ModifyRemarkLLS_212\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_DesignatePrinterLLS201\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_ArunkLLS_202\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_ArunkLLS_202\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_ArunkLLS_202\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SpecialServiceLLS_221\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_EnhancedAirTicket_120\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SessionClose_101\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SessionClose_101\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SessionClose_101\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SessionCreate_100\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SessionCreate_100\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_SessionCreate_100\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_GetReservation_1170\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_GetReservation_1170\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_GetReservation_1170\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Entidades\EntidadesGDS\EntidadesGDS.csproj">
+      <Project>{02be47a3-94ce-456f-a441-b0e6270add93}</Project>
+      <Name>EntidadesGDS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_eTicketCouponLLS_200\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Sabre_TravelItineraryReadRQ_310\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

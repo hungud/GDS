@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{347A5F15-E478-40A8-BA8B-1A29C70AC5B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GDSLib</RootNamespace>
+    <AssemblyName>GDSLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreLib, Version=1.28.8.17, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreWebLib">
+      <HintPath>..\..\Dependencias\CoreWebLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomLog, Version=1.26.12.17, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\CustomLog.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Dependencias\3eros\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\3eros\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\3eros\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime">
+      <HintPath>..\..\Dependencias\3eros\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.102.2.20, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\3eros\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="OracleLib, Version=1.25.10.17, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencias\OracleLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XperiCode.Impersonator">
+      <HintPath>..\..\Dependencias\3eros\XperiCode.Impersonator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Amadeus\Anulacion.cs" />
+    <Compile Include="Code\Amadeus\Herramienta.cs" />
+    <Compile Include="Code\Amadeus\InstantSearch.cs" />
+    <Compile Include="Code\Amadeus\Itinerario.cs" />
+    <Compile Include="Code\Amadeus\Reporte.cs" />
+    <Compile Include="Code\Base\Common.cs" />
+    <Compile Include="Code\Base\Common2.cs" />
+    <Compile Include="Code\Kiu\Itinerario.cs" />
+    <Compile Include="Code\PTA\Boleto.cs" />
+    <Compile Include="Code\PTA\ComisionFee.cs" />
+    <Compile Include="Code\PTA\Facturacion.cs" />
+    <Compile Include="Code\PTA\General.cs" />
+    <Compile Include="Code\PTA\Hotel.cs" />
+    <Compile Include="Code\PTA\IncidenciaBitacoraCC.cs" />
+    <Compile Include="Code\PTA\Miscelaneo.cs" />
+    <Compile Include="Code\PTA\ReglasEmision.cs" />
+    <Compile Include="Code\PTA\SabreRedApp.cs" />
+    <Compile Include="Code\PTA\SesionB2BWallet.cs" />
+    <Compile Include="Code\PTA\TarjetaCredito.cs" />
+    <Compile Include="Code\Sabre\Anulacion.cs" />
+    <Compile Include="Code\Sabre\Cola.cs" />
+    <Compile Include="Code\Sabre\Herramienta.cs" />
+    <Compile Include="Code\Sabre\HotelGK.cs" />
+    <Compile Include="Code\Sabre\Itinerario.cs" />
+    <Compile Include="Code\Sabre\ItinerarioHotel.cs" />
+    <Compile Include="Code\Sabre\Reemision.cs" />
+    <Compile Include="Code\Sabre\Reporte.cs" />
+    <Compile Include="Code\Utiles\Ambiente.cs" />
+    <Compile Include="Code\Utiles\Configuracion.cs" />
+    <Compile Include="Code\Utiles\Utilerias.cs" />
+    <Compile Include="Code\Utiles\VoucherHotel.cs" />
+    <Compile Include="Code\WEB\Solicitud.cs" />
+    <Compile Include="Models\DatabaseCredential.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GDSLib.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDatosLib\BaseDatosLib.csproj">
+      <Project>{aec9fbed-98cd-429e-a2a4-8f1533efe10d}</Project>
+      <Name>BaseDatosLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\EntidadesGDS\EntidadesGDS.csproj">
+      <Project>{02be47a3-94ce-456f-a441-b0e6270add93}</Project>
+      <Name>EntidadesGDS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GDS\AmadeusLib\AmadeusLib.csproj">
+      <Project>{b1ef83c4-a7d6-4862-818b-dfb799e7422a}</Project>
+      <Name>AmadeusLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GDS\KiuLib\KiuLib.csproj">
+      <Project>{a1e6d54f-94ad-458a-a66a-e1149079d1f5}</Project>
+      <Name>KiuLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GDS\SabreLib\SabreLib.csproj">
+      <Project>{9c6c7e8a-f89a-4803-8e62-603ea30e1f0f}</Project>
+      <Name>SabreLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServicioLib\ServicioLib.csproj">
+      <Project>{8c08cd45-508c-4a4a-8e94-41501cfa5d33}</Project>
+      <Name>ServicioLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

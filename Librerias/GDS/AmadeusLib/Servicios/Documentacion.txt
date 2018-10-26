@@ -1,0 +1,8 @@
+﻿
+Tomar en cuenta que los servicios:
+=> PNR_AddMultiElements
+=> PNR_Cancel
+=> PNR_Retrieve
+
+Retornar la misma respuesta, por ello se ahislo ese RS
+=> PNR_Reply

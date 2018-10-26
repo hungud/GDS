@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml name="SabreWebServices" id="SabreWebServices" type="text/xml">
+  <WebService Id="0">
+    <Name>SessionCreate</Name>
+    <Service>SessionCreateRQService</Service>
+    <Action>SessionCreateRQ</Action>
+    <Cid>cid:SessionCreateRQ</Cid>
+    <Version>1.0.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/sabreXML1.0.00/usg/SessionCreateRQ.wsdl</Url>
+  </WebService>
+  <WebService Id="1">
+    <Name>SessionClose</Name>
+    <Service>SessionCloseRQService</Service>
+    <Action>SessionCloseRQ</Action>
+    <Cid>cid:SessionCloseRQ</Cid>
+    <Version>1.0.1</Version>
+    <Url>http://webservices.sabre.com/wsdl/sabreXML1.0.00/usg/SessionCloseRQ.wsdl</Url>
+  </WebService>
+  <WebService Id="2">
+    <Name>SabreCommand</Name>
+    <Service>SabreCommandLLSService</Service>
+    <Action>SabreCommandLLSRQ</Action>
+    <Cid>cid:SabreCommandLLSRQ</Cid>
+    <Version>1.8.1</Version>
+    <Url>http://webservices.sabre.com/wsdl/sabreXML1.0.00/tpf/SabreCommandLLS1.8.1RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="3">
+    <Name>IgnoreTransaction</Name>
+    <Service>IgnoreTransactionService</Service>
+    <Action>IgnoreTransactionLLSRQ</Action>
+    <Cid>cid:IgnoreTransactionLLSRQ</Cid>
+    <Version>2.0.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/IgnoreTransactionLLS2.0.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="4">
+    <Name>Ping</Name>
+    <Service>SWSService</Service>
+    <Action>OTA_PingRQ</Action>
+    <Cid>cid:OTA_PingRQ</Cid>
+    <Version>1.0.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/sabreXML1.0.00/usg/OTA_PingRQ.wsdl</Url>
+  </WebService>
+  <WebService Id="5">
+    <Name>TravelItineraryRead</Name>
+    <Service>TravelItineraryReadService</Service>
+    <Action>TravelItineraryReadRQ</Action>
+    <Cid>cid:TravelItineraryReadRQ</Cid>
+    <Version>3.10.0</Version>
+    <Url>http://files.developer.sabre.com/wsdl/sabreXML1.0.00/pnrservices/TravelItineraryReadRQ3.10.0.wsdl</Url>
+  </WebService>
+  <WebService Id="6">
+    <Name>ContextChange</Name>
+    <Service>ContextChangeService</Service>
+    <Action>ContextChangeLLSRQ</Action>
+    <Cid>cid:ContextChangeLLSRQ</Cid>
+    <Version>2.0.3</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/ContextChangeLLS2.0.3RQ.wsdl</Url>
+  </WebService>  
+  <WebService Id="7">
+    <Name>AirPrice</Name>
+    <Service>OTA_AirPriceService</Service>
+    <Action>OTA_AirPriceLLSRQ</Action>
+    <Cid>cid:OTA_AirPriceLLSRQ</Cid>
+    <Version>2.16.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/OTA_AirPriceLLS2.16.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="8">
+    <Name>DailySalesReport</Name>
+    <Service>DailySalesReportService</Service>
+    <Action>DailySalesReportLLSRQ</Action>
+    <Cid>cid:DailySalesReportLLSRQ</Cid>
+    <Version>2.0.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/DailySalesReportLLS2.0.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="9">
+    <Name>DailyEMDReport</Name>
+    <Service>DailyEMD_ReportService</Service>
+    <Action>DailyEMD_ReportLLSRQ</Action>
+    <Cid>cid:DailyEMD_ReportLLSRQ</Cid>
+    <Version>2.1.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/DailyEMD_ReportLLS2.1.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="10">
+    <Name>UnusedeTicketReport</Name>
+    <Service>UnusedeTicketReportService</Service>
+    <Action>UnusedeTicketReportLLSRQ</Action>
+    <Cid>cid:UnusedeTicketReportLLSRQ</Cid>
+    <Version>2.0.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/UnusedeTicketReportLLS2.0.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="11">
+    <Name>DailyRefundReport</Name>
+    <Service>DailyRefundReportService</Service>
+    <Action>DailyRefundReportLLSRQ</Action>
+    <Cid>cid:DailyRefundReportLLSRQ</Cid>
+    <Version>2.0.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/DailyRefundReportLLS2.0.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="12">
+    <Name>EnhancedAirBook</Name>
+    <Service>EnhancedAirBookService</Service>
+    <Action>EnhancedAirBookRQ</Action>
+    <Cid>cid:EnhancedAirBookRQ</Cid>
+    <Version>3.7.0</Version>
+    <Url>http://files.developer.sabre.com/wsdl/sabreXML1.0.00/ServicesPlatform/EnhancedAirBook3.7.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="13">
+    <Name>TravelItineraryAddInfo</Name>
+    <Service>TravelItineraryAddInfoService</Service>
+    <Action>TravelItineraryAddInfoLLSRQ</Action>
+    <Cid>cid:TravelItineraryAddInfoLLSRQ</Cid>
+    <Version>2.2.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/TravelItineraryAddInfoLLS2.2.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="14">
+    <Name>SpecialService</Name>
+    <Service>SpecialServiceService</Service>
+    <Action>SpecialServiceLLSRQ</Action>
+    <Cid>cid:SpecialServiceLLSRQ</Cid>
+    <Version>2.2.1</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/SpecialServiceLLS2.2.1RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="15">
+    <Name>AddRemark</Name>
+    <Service>AddRemarkService</Service>
+    <Action>AddRemarkLLSRQ</Action>
+    <Cid>cid:AddRemarkLLSRQ</Cid>
+    <Version>2.1.1</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/AddRemarkLLS2.1.1RQ.wsdl</Url>
+  </WebService>  
+  <WebService Id="16">
+    <Name>TicketCoupon</Name>
+    <Service>eTicketCouponService</Service>
+    <Action>eTicketCouponLLSRQ</Action>
+    <Cid>cid:eTicketCouponRQ</Cid>
+    <Version>2.0.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/eTicketCouponLLS2.0.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="17">
+    <Name>AutomatedExchange</Name>
+    <Service>AutomatedExchangesService</Service>
+    <Action>AutomatedExchangesLLSRQ</Action>
+    <Cid>cid:AutomatedExchangesRQ</Cid>
+    <Version>2.6.1</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/AutomatedExchangesLLS2.6.1RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="18">
+    <Name>AirTicket</Name>
+    <Service>AirTicketService</Service>
+    <Action>AirTicketLLSRQ</Action>
+    <Cid>cid:AirTicketLLSRQ</Cid>
+    <Version>2.10.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/AirTicketLLS2.10.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="19">
+    <Name>EndTransaction</Name>
+    <Service>EndTransactionService</Service>
+    <Action>EndTransactionLLSRQ</Action>
+    <Cid>cid:EndTransactionLLSRQ</Cid>
+    <Version>2.0.7</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/EndTransactionLLS2.0.7RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="20">
+    <Name>QueueAccess</Name>
+    <Service>QueueAccessService</Service>
+    <Action>QueueAccessLLSRQ</Action>
+    <Cid>cid:QueueAccessLLSRQ</Cid>
+    <Version>2.0.8</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/QueueAccessLLS2.0.8RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="21">
+    <Name>QueueAnalysis</Name>
+    <Service>QueueAnalysisService</Service>
+    <Action>QueueAnalysisLLSRQ</Action>
+    <Cid>cid:QueueAnalysisLLSRQ</Cid>
+    <Version>2.0.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/QueueAnalysisLLS2.0.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="22">
+    <Name>QueueCount</Name>
+    <Service>QueueCountService</Service>
+    <Action>QueueCountLLSRQ</Action>
+    <Cid>cid:QueueCountLLSRQ</Cid>
+    <Version>2.2.0</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/QueueCountLLS2.2.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="23">
+    <Name>QueuePlace</Name>
+    <Service>QueuePlaceService</Service>
+    <Action>QueuePlaceLLSRQ</Action>
+    <Cid>cid:QueuePlaceLLSRQ</Cid>
+    <Version>2.0.4</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/QueuePlaceLLS2.0.4RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="24">
+    <Name>TravelItineraryModifyInfo</Name>
+    <Service>TravelItineraryModifyInfoService</Service>
+    <Action>TravelItineraryModifyInfoLLSRQ</Action>
+    <Cid>cid:TravelItineraryModifyInfoLLSRQ</Cid>
+    <Version>2.1.1</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/TravelItineraryModifyInfoLLS2.1.1RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="25">
+    <Name>ModifyRemark</Name>
+    <Service>ModifyRemarkService</Service>
+    <Action>ModifyRemarkLLSRQ</Action>
+    <Cid>cid:ModifyRemarkLLSRQ</Cid>
+    <Version>2.1.2</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/ModifyRemarkLLS2.1.2RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="26">
+    <Name>DesignatePrinter</Name>
+    <Service>DesignatePrinterService</Service>
+    <Action>DesignatePrinterLLSRQ</Action>
+    <Cid>cid:DesignatePrinterLLSRQ</Cid>
+    <Version>2.0.1</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/DesignatePrinterLLS2.0.1RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="27">
+    <Name>ArunkService</Name>
+    <Service>ARUNK_Service</Service>
+    <Action>ARUNK_LLSRQ</Action>
+    <Cid>cid:ARUNK_LLSRQ</Cid>
+    <Version>2.0.2</Version>
+    <Url>http://webservices.sabre.com/wsdl/tpfc/ARUNK_LLS2.0.2RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="28">
+    <Name>EnhancedAirTicket</Name>
+    <Service>AirTicketService</Service>
+    <Action>AirTicketRQ</Action>
+    <Cid>cid:AirTicketRQ</Cid>
+    <Version>1.2.0</Version>
+    <Url>http://files.developer.sabre.com/wsdl/sabreXML1.0.00/ServicesPlatform/AirTicket1.2.0RQ.wsdl</Url>
+  </WebService>
+  <WebService Id="29">
+    <Name>GetReservation</Name>
+    <Service>GetReservationService</Service>
+    <Action>getReservationRQ</Action>
+    <Cid>cid:GetReservationRQ</Cid>
+    <Version>1.17.0</Version>
+    <Url>http://files.developer.sabre.com/wsdl/sabreXML1.0.00/pnrservices/GetReservation_1.17.0.wsdl</Url>
+  </WebService>
+</xml>

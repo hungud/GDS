@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b702a039-1095-4252-b34d-50e07cee179f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webservices.sabre.com/wsdl/tpfc/QueueAccessLLS2.0.8RQ.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xml.xsd" MetadataType="Schema" ID="f22715ed-3063-424f-972f-2432ca8d9ebb" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xml.xsd" />
+    <MetadataFile FileName="xlink.xsd" MetadataType="Schema" ID="4400c720-4d43-40b2-b6d7-e59185bae39b" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xlink.xsd" />
+    <MetadataFile FileName="STL_Header_v.xsd" MetadataType="Schema" ID="06919bd2-1a9c-462a-93fb-5000a96ae052" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/STL_Header_v.1.2.0.xsd" />
+    <MetadataFile FileName="QueueAccessLLS2.xsd" MetadataType="Schema" ID="5b380408-bf24-4125-9d3d-60b1bbfbdb90" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/QueueAccessLLS2.0.8RQ.xsd" />
+    <MetadataFile FileName="sws_common.xsd" MetadataType="Schema" ID="ca05d305-3dd2-414c-81ea-241234261dfe" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/sws_common.xsd" />
+    <MetadataFile FileName="STL_For_SabreProtocol_v.xsd" MetadataType="Schema" ID="c57388a5-f405-41fa-b351-c920d711e110" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/STL_For_SabreProtocol_v.1.2.0.xsd" />
+    <MetadataFile FileName="wsse.xsd" MetadataType="Schema" ID="83e27668-917e-4a5f-81e2-333015a79cdb" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/wsse.xsd" />
+    <MetadataFile FileName="QueueAccessLLS2.wsdl" MetadataType="Wsdl" ID="25f3222d-8b81-4f29-9830-41c4a9eb9917" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/QueueAccessLLS2.0.8RQ.wsdl" />
+    <MetadataFile FileName="QueueAccessLLS21.xsd" MetadataType="Schema" ID="b31e73bf-54ac-4c35-adc7-07c0d379be82" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/QueueAccessLLS2.0.8RQRS.xsd" />
+    <MetadataFile FileName="envelope.xsd" MetadataType="Schema" ID="549b369d-b851-4b72-b205-6828c75c685b" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/envelope.xsd" />
+    <MetadataFile FileName="xmldsig-core-schema.xsd" MetadataType="Schema" ID="9abbe062-9617-4ab8-8d02-fde8a5b2ce5c" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xmldsig-core-schema.xsd" />
+    <MetadataFile FileName="QueueAccessLLS22.xsd" MetadataType="Schema" ID="c3f22a69-c2a0-42de-8f11-d7ba8c34624d" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/QueueAccessLLS2.0.8RS.xsd" />
+    <MetadataFile FileName="msg-header-2_0.xsd" MetadataType="Schema" ID="25c92018-bf33-4c3e-b16d-1fcd483f4954" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/msg-header-2_0.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

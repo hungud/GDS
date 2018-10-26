@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml name="AmadeusWebServices" id="AmadeusWebServices" type="text/xml">
+  
+  <WebService Id="0">
+    <Name>Air_SellFromRecommendation_05_2_IA</Name>
+    <Service>Air_SellFromRecommendation</Service>
+    <Action>ITAREQ_05_2_IA</Action>
+    <Version>05_2_IA</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+  
+  <WebService Id="1">
+    <Name>Command_Cryptic_07_3_1A</Name>
+    <Service>Command_Cryptic</Service>
+    <Action>HSFREQ_07_3_1A</Action>
+    <Version>07_3_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+  
+  <WebService Id="2">
+    <Name>DocIssuance_IssueTicket_09_1_1A</Name>
+    <Service>DocIssuance_IssueTicket</Service>
+    <Action>TTKTIQ_09_1_1A</Action>
+    <Version>09_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+  
+  <WebService Id="3">
+    <Name>Fare_PricePNRWithBookingClass_16_1_1A</Name>
+    <Service>Fare_PricePNRWithBookingClass</Service>
+    <Action>TPCBRQ_16_1_1A</Action>
+    <Version>16_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+  
+  <WebService Id="4">
+    <Name>Fare_MasterPricerTravelBoardSearch_13_1_1A</Name>
+    <Service>Fare_MasterPricerTravelBoardSearch</Service>
+    <Action>FMPTBQ_13_1_1A</Action>
+    <Version>13_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+  
+  <WebService Id="5">
+    <Name>PNR_AddMultiElements_10_1_1A</Name>
+    <Service>PNR_AddMultiElements</Service>
+    <Action>PNRADD_10_1_1A</Action>
+    <Version>10_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+
+  <WebService Id="6">
+    <Name>PNR_Cancel_10_1_1A</Name>
+    <Service>PNR_Cancel</Service>
+    <Action>PNRXCL_10_1_1A</Action>
+    <Version>10_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+
+  <WebService Id="7">
+    <Name>PNR_Retrieve_10_1_1A</Name>
+    <Service>PNR_Retrieve</Service>
+    <Action>PNRRET_10_1_1A</Action>
+    <Version>10_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+
+  <WebService Id="8">
+    <Name>SalesReports_DisplayQueryReport_10_1_1A</Name>
+    <Service>SalesReports_DisplayQueryReport</Service>
+    <Action>TSRQRQ_10_1_1A</Action>
+    <Version>10_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+
+  <WebService Id="9">
+    <Name>Ticket_CancelDocument_11_1_1A</Name>
+    <Service>Ticket_CancelDocument</Service>
+    <Action>TRCANQ_11_1_1A</Action>
+    <Version>11_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+
+  <WebService Id="10">
+    <Name>Ticket_CheckEligibility_13_1_1A</Name>
+    <Service>Ticket_CheckEligibility</Service>
+    <Action>FATCEQ_13_1_1A</Action>
+    <Version>13_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+
+  <WebService Id="11">
+    <Name>Ticket_CreateTSTFromPricing_04_1_1A</Name>
+    <Service>Ticket_CreateTSTFromPricing</Service>
+    <Action>TAUTCQ_04_1_1A</Action>
+    <Version>04_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+
+  <WebService Id="12">
+    <Name>Ticket_ProcessETicket_04_1_IA</Name>
+    <Service>Ticket_ProcessETicket</Service>
+    <Action>TKTREQ_04_1_IA</Action>
+    <Version>04_1_IA</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+
+  <WebService Id="13">
+    <Name>Ticket_ReissueConfirmedPricing_13_2_1A</Name>
+    <Service>Ticket_ReissueConfirmedPricing</Service>
+    <Action>TARCPQ_13_2_1A</Action>
+    <Version>13_2_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+
+  <WebService Id="14">
+    <Name>Ticket_RepricePNRWithBookingClass_12_2_1A</Name>
+    <Service>Ticket_RepricePNRWithBookingClass</Service>
+    <Action>TARIPQ_12_2_1A</Action>
+    <Version>12_2_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+  
+  <WebService Id="15">
+    <Name>Fare_InstantTravelBoardSearch_16_2_1A</Name>
+    <Service>Fare_InstantTravelBoardSearch</Service>
+    <Action>FIFRTQ_16_2_1A</Action>
+    <Version>16_2_1A</Version>
+    <Encryption>0</Encryption>
+    <!--<Encryption>1</Encryption>-->
+  </WebService>
+
+  <WebService Id="16">
+    <Name>Ticket_DisplayTSTReply_15_1_1A</Name>
+    <Service>Ticket_DisplayTSTReply</Service>
+    <Action>TTSTRQ_15_1_1A</Action>
+    <Version>15_1_1A</Version>
+    <Encryption>0</Encryption>
+  </WebService>
+</xml>

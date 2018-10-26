@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{535DECD7-9D5B-4377-9963-2B76B70D7F5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AmadeusLATAM.B2BWallet.Core</RootNamespace>
+    <AssemblyName>AmadeusLATAM.B2BWallet.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="B2BWalletService\BaseService.cs" />
+    <Compile Include="B2BWalletService\PAY_DeleteVirtualCardService.cs" />
+    <Compile Include="B2BWalletService\PAY_GenerateVirtualCardService.cs" />
+    <Compile Include="B2BWalletService\PAY_GetVirtualCardDetailsService.cs" />
+    <Compile Include="B2BWalletService\PAY_ListVirtualCardsService.cs" />
+    <Compile Include="B2BWalletService\PAY_UpdateVirtualCardService.cs" />
+    <Compile Include="FacadeVerb.cs" />
+    <Compile Include="B2BWalletVerb\B2BWalletDelete.cs" />
+    <Compile Include="B2BWalletVerb\B2BWalletDetail.cs" />
+    <Compile Include="B2BWalletVerb\B2BWalletGenerate.cs" />
+    <Compile Include="B2BWalletVerb\B2BWalletList.cs" />
+    <Compile Include="B2BWalletVerb\B2BWalletUpdate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AmadeusLATAM.B2BWallet.Amadeus\AmadeusLATAM.B2BWallet.Amadeus.csproj">
+      <Project>{8d47abcb-c5b7-49c4-a642-cbf5a57a6db2}</Project>
+      <Name>AmadeusLATAM.B2BWallet.Amadeus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AmadeusLATAM.B2BWallet.Common\AmadeusLATAM.B2BWallet.Common.csproj">
+      <Project>{243b1c7c-2102-4225-be76-462b2ed2afab}</Project>
+      <Name>AmadeusLATAM.B2BWallet.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

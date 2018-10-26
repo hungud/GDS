@@ -1,0 +1,162 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencias", "Dependencias", "{F9B9DD18-BAC1-49A7-86B6-540C91AD3FD9}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencias\CoreDaoLib.dll = Dependencias\CoreDaoLib.dll
+		Dependencias\CoreLib.dll = Dependencias\CoreLib.dll
+		Dependencias\CoreWebLib.dll = Dependencias\CoreWebLib.dll
+		Dependencias\CustomLog.dll = Dependencias\CustomLog.dll
+		Dependencias\NuevoMundoSecurity.dll = Dependencias\NuevoMundoSecurity.dll
+		Dependencias\OracleLib.dll = Dependencias\OracleLib.dll
+		Dependencias\RepositorioWebApi.dll = Dependencias\RepositorioWebApi.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Librerias", "Librerias", "{505FAF25-E6E3-4D22-B109-D06A445535DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{35740ADE-2976-4A42-B4B9-460E8D044AD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDSLib", "Librerias\GDSLib\GDSLib.csproj", "{347A5F15-E478-40A8-BA8B-1A29C70AC5B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDatosLib", "Librerias\BaseDatosLib\BaseDatosLib.csproj", "{AEC9FBED-98CD-429E-A2A4-8F1533EFE10D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioLib", "Librerias\ServicioLib\ServicioLib.csproj", "{8C08CD45-508C-4A4A-8E94-41501CFA5D33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3eros", "3eros", "{28AAEEFE-5B79-40DD-8BF8-4E14638D5387}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencias\3eros\itextsharp.dll = Dependencias\3eros\itextsharp.dll
+		Dependencias\3eros\log4net.dll = Dependencias\3eros\log4net.dll
+		Dependencias\3eros\Newtonsoft.Json.dll = Dependencias\3eros\Newtonsoft.Json.dll
+		Dependencias\3eros\NodaTime.dll = Dependencias\3eros\NodaTime.dll
+		Dependencias\3eros\Oracle.DataAccess.dll = Dependencias\3eros\Oracle.DataAccess.dll
+		Dependencias\3eros\XperiCode.Impersonator.dll = Dependencias\3eros\XperiCode.Impersonator.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entidades", "Entidades", "{3268DB6A-251C-4015-B7C0-93354456204C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesGDS", "Librerias\Entidades\EntidadesGDS\EntidadesGDS.csproj", "{02BE47A3-94CE-456F-A441-B0E6270ADD93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesCore", "Librerias\Entidades\EntidadesCore\EntidadesCore.csproj", "{970D6156-A45C-45EC-BB2D-722D8D5B87E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GDS", "GDS", "{4B72E452-C796-427D-9205-96D40BC46687}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SabreLib", "Librerias\GDS\SabreLib\SabreLib.csproj", "{9C6C7E8A-F89A-4803-8E62-603EA30E1F0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KiuLib", "Librerias\GDS\KiuLib\KiuLib.csproj", "{A1E6D54F-94AD-458A-A66A-E1149079D1F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmadeusLib", "Librerias\GDS\AmadeusLib\AmadeusLib.csproj", "{B1EF83C4-A7D6-4862-818B-DFB799E7422A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servicios", "Servicios", "{BB9EBAB8-8CFA-4EC1-985B-13CF5856AC25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiciosGDSSoap", "Servicios\ServiciosGDSSoap\ServiciosGDSSoap.csproj", "{C54F1A6C-7301-4FF2-B118-C86B0F9060C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiciosGDS", "Servicios\ServiciosGDS\ServiciosGDS.csproj", "{6891C4AA-296D-482A-B3BF-90B1EE435B9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Amadeus", "Amadeus", "{680717E7-F98C-46B4-97D6-E9B46225162A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmadeusLATAM.B2BWallet.Core", "Librerias\Amadeus\AmadeusLATAM.B2BWallet.Core\AmadeusLATAM.B2BWallet.Core.csproj", "{535DECD7-9D5B-4377-9963-2B76B70D7F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmadeusLATAM.B2BWallet.Common", "Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\AmadeusLATAM.B2BWallet.Common.csproj", "{243B1C7C-2102-4225-BE76-462B2ED2AFAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmadeusLATAM.B2BWallet.Amadeus", "Librerias\Amadeus\AmadeusLATAM.B2BWallet.Amadeus\AmadeusLATAM.B2BWallet.Amadeus.csproj", "{8D47ABCB-C5B7-49C4-A642-CBF5A57A6DB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recursos", "Recursos", "{9554B911-429B-4969-AAE7-62E18A179AEE}"
+	ProjectSection(SolutionItems) = preProject
+		Recursos\WSDL_ServiciosAmadeus.rar = Recursos\WSDL_ServiciosAmadeus.rar
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{48D4E366-D03B-435F-8075-7F9339CC8002}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35740ADE-2976-4A42-B4B9-460E8D044AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35740ADE-2976-4A42-B4B9-460E8D044AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35740ADE-2976-4A42-B4B9-460E8D044AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35740ADE-2976-4A42-B4B9-460E8D044AD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{347A5F15-E478-40A8-BA8B-1A29C70AC5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{347A5F15-E478-40A8-BA8B-1A29C70AC5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{347A5F15-E478-40A8-BA8B-1A29C70AC5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{347A5F15-E478-40A8-BA8B-1A29C70AC5B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEC9FBED-98CD-429E-A2A4-8F1533EFE10D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEC9FBED-98CD-429E-A2A4-8F1533EFE10D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEC9FBED-98CD-429E-A2A4-8F1533EFE10D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEC9FBED-98CD-429E-A2A4-8F1533EFE10D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C08CD45-508C-4A4A-8E94-41501CFA5D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C08CD45-508C-4A4A-8E94-41501CFA5D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C08CD45-508C-4A4A-8E94-41501CFA5D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C08CD45-508C-4A4A-8E94-41501CFA5D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02BE47A3-94CE-456F-A441-B0E6270ADD93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BE47A3-94CE-456F-A441-B0E6270ADD93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BE47A3-94CE-456F-A441-B0E6270ADD93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BE47A3-94CE-456F-A441-B0E6270ADD93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{970D6156-A45C-45EC-BB2D-722D8D5B87E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970D6156-A45C-45EC-BB2D-722D8D5B87E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970D6156-A45C-45EC-BB2D-722D8D5B87E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970D6156-A45C-45EC-BB2D-722D8D5B87E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C6C7E8A-F89A-4803-8E62-603EA30E1F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C6C7E8A-F89A-4803-8E62-603EA30E1F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C6C7E8A-F89A-4803-8E62-603EA30E1F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C6C7E8A-F89A-4803-8E62-603EA30E1F0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E6D54F-94AD-458A-A66A-E1149079D1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E6D54F-94AD-458A-A66A-E1149079D1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E6D54F-94AD-458A-A66A-E1149079D1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E6D54F-94AD-458A-A66A-E1149079D1F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1EF83C4-A7D6-4862-818B-DFB799E7422A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1EF83C4-A7D6-4862-818B-DFB799E7422A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1EF83C4-A7D6-4862-818B-DFB799E7422A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1EF83C4-A7D6-4862-818B-DFB799E7422A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54F1A6C-7301-4FF2-B118-C86B0F9060C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54F1A6C-7301-4FF2-B118-C86B0F9060C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54F1A6C-7301-4FF2-B118-C86B0F9060C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54F1A6C-7301-4FF2-B118-C86B0F9060C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6891C4AA-296D-482A-B3BF-90B1EE435B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6891C4AA-296D-482A-B3BF-90B1EE435B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6891C4AA-296D-482A-B3BF-90B1EE435B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6891C4AA-296D-482A-B3BF-90B1EE435B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535DECD7-9D5B-4377-9963-2B76B70D7F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535DECD7-9D5B-4377-9963-2B76B70D7F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535DECD7-9D5B-4377-9963-2B76B70D7F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535DECD7-9D5B-4377-9963-2B76B70D7F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243B1C7C-2102-4225-BE76-462B2ED2AFAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243B1C7C-2102-4225-BE76-462B2ED2AFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243B1C7C-2102-4225-BE76-462B2ED2AFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243B1C7C-2102-4225-BE76-462B2ED2AFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D47ABCB-C5B7-49C4-A642-CBF5A57A6DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D47ABCB-C5B7-49C4-A642-CBF5A57A6DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D47ABCB-C5B7-49C4-A642-CBF5A57A6DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D47ABCB-C5B7-49C4-A642-CBF5A57A6DB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28AAEEFE-5B79-40DD-8BF8-4E14638D5387} = {F9B9DD18-BAC1-49A7-86B6-540C91AD3FD9}
+		{347A5F15-E478-40A8-BA8B-1A29C70AC5B1} = {505FAF25-E6E3-4D22-B109-D06A445535DA}
+		{AEC9FBED-98CD-429E-A2A4-8F1533EFE10D} = {505FAF25-E6E3-4D22-B109-D06A445535DA}
+		{8C08CD45-508C-4A4A-8E94-41501CFA5D33} = {505FAF25-E6E3-4D22-B109-D06A445535DA}
+		{3268DB6A-251C-4015-B7C0-93354456204C} = {505FAF25-E6E3-4D22-B109-D06A445535DA}
+		{4B72E452-C796-427D-9205-96D40BC46687} = {505FAF25-E6E3-4D22-B109-D06A445535DA}
+		{680717E7-F98C-46B4-97D6-E9B46225162A} = {505FAF25-E6E3-4D22-B109-D06A445535DA}
+		{02BE47A3-94CE-456F-A441-B0E6270ADD93} = {3268DB6A-251C-4015-B7C0-93354456204C}
+		{970D6156-A45C-45EC-BB2D-722D8D5B87E3} = {3268DB6A-251C-4015-B7C0-93354456204C}
+		{9C6C7E8A-F89A-4803-8E62-603EA30E1F0F} = {4B72E452-C796-427D-9205-96D40BC46687}
+		{A1E6D54F-94AD-458A-A66A-E1149079D1F5} = {4B72E452-C796-427D-9205-96D40BC46687}
+		{B1EF83C4-A7D6-4862-818B-DFB799E7422A} = {4B72E452-C796-427D-9205-96D40BC46687}
+		{C54F1A6C-7301-4FF2-B118-C86B0F9060C9} = {BB9EBAB8-8CFA-4EC1-985B-13CF5856AC25}
+		{6891C4AA-296D-482A-B3BF-90B1EE435B9B} = {BB9EBAB8-8CFA-4EC1-985B-13CF5856AC25}
+		{535DECD7-9D5B-4377-9963-2B76B70D7F5A} = {680717E7-F98C-46B4-97D6-E9B46225162A}
+		{243B1C7C-2102-4225-BE76-462B2ED2AFAB} = {680717E7-F98C-46B4-97D6-E9B46225162A}
+		{8D47ABCB-C5B7-49C4-A642-CBF5A57A6DB2} = {680717E7-F98C-46B4-97D6-E9B46225162A}
+	EndGlobalSection
+EndGlobal

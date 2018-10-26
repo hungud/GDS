@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e9b5cbc2-d590-4d1f-9a61-039e8455c931" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webservices.sabre.com/wsdl/tpfc/ContextChangeLLS2.0.3RQ.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ContextChangeLLS2.xsd" MetadataType="Schema" ID="d3f68b5f-6c4d-4403-81c6-641cfe5f76c2" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/ContextChangeLLS2.0.3RQRS.xsd" />
+    <MetadataFile FileName="xlink.xsd" MetadataType="Schema" ID="3fe0dbd3-33c6-4852-b0de-76646647530f" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xlink.xsd" />
+    <MetadataFile FileName="ContextChangeLLS21.xsd" MetadataType="Schema" ID="72a4b7cf-caa9-4ddf-b9cd-128b67455fbf" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/ContextChangeLLS2.0.3RS.xsd" />
+    <MetadataFile FileName="ContextChangeLLS22.xsd" MetadataType="Schema" ID="5754892b-ac6c-452a-a9aa-48e752f49311" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/ContextChangeLLS2.0.3RQ.xsd" />
+    <MetadataFile FileName="ContextChangeLLS2.wsdl" MetadataType="Wsdl" ID="61c010dd-80dd-414f-80d9-0ce56316619f" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/ContextChangeLLS2.0.3RQ.wsdl" />
+    <MetadataFile FileName="STL_Header_v.xsd" MetadataType="Schema" ID="c9edd036-1acf-4406-bb65-984bd6dce727" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/STL_Header_v.1.2.0.xsd" />
+    <MetadataFile FileName="xml.xsd" MetadataType="Schema" ID="7536c123-37f4-4fff-96be-71ed26416d39" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xml.xsd" />
+    <MetadataFile FileName="STL_For_SabreProtocol_v.xsd" MetadataType="Schema" ID="61758110-c9cb-45c8-b92f-f9499b3f399f" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/STL_For_SabreProtocol_v.1.2.0.xsd" />
+    <MetadataFile FileName="wsse.xsd" MetadataType="Schema" ID="390ad71a-1781-46b6-aa58-8e7f796de358" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/wsse.xsd" />
+    <MetadataFile FileName="envelope.xsd" MetadataType="Schema" ID="2e35122d-6ef9-42ec-a747-bd2ae3adf232" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/envelope.xsd" />
+    <MetadataFile FileName="xmldsig-core-schema.xsd" MetadataType="Schema" ID="bfeab259-7ae2-4812-83ec-4cff0cdad0c7" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xmldsig-core-schema.xsd" />
+    <MetadataFile FileName="msg-header-2_0.xsd" MetadataType="Schema" ID="188c51e0-e333-4fea-aa93-316ca3162fef" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/msg-header-2_0.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

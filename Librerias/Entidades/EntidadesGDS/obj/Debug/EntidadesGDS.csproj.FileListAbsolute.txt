@@ -1,0 +1,14 @@
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\bin\Debug\EntidadesGDS.dll
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\bin\Debug\EntidadesGDS.pdb
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\bin\Debug\CoreWebLib.dll
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\bin\Debug\Newtonsoft.Json.dll
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\obj\Debug\EntidadesGDS.csprojResolveAssemblyReference.cache
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\obj\Debug\EntidadesGDS.dll
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\obj\Debug\EntidadesGDS.pdb
+C:\GDS\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\bin\Debug\EntidadesGDS.dll
+C:\GDS\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\bin\Debug\EntidadesGDS.pdb
+C:\GDS\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\bin\Debug\CoreWebLib.dll
+C:\GDS\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\bin\Debug\Newtonsoft.Json.dll
+C:\GDS\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\obj\Debug\EntidadesGDS.csprojResolveAssemblyReference.cache
+C:\GDS\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\obj\Debug\EntidadesGDS.dll
+C:\GDS\GDS_ServicioGDS\Librerias\Entidades\EntidadesGDS\obj\Debug\EntidadesGDS.pdb

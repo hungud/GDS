@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="702a3059-45dd-4428-9793-4b2449379a2e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webservices.sabre.com/wsdl/tpfc/QueueAnalysisLLS2.0.0RQ.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xml.xsd" MetadataType="Schema" ID="de3380d2-493a-4913-a01c-ef2cb3e0bd3a" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xml.xsd" />
+    <MetadataFile FileName="xlink.xsd" MetadataType="Schema" ID="7e60e12c-78d3-4416-909b-006f940a6ba4" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xlink.xsd" />
+    <MetadataFile FileName="STL_Header_v.xsd" MetadataType="Schema" ID="a5ce6591-b540-4c5d-ba59-8269b0769c91" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/STL_Header_v.1.2.0.xsd" />
+    <MetadataFile FileName="QueueAnalysisLLS2.xsd" MetadataType="Schema" ID="029133a5-384d-4652-86d0-dec36c9b0c67" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/QueueAnalysisLLS2.0.0RQRS.xsd" />
+    <MetadataFile FileName="QueueAnalysisLLS2.wsdl" MetadataType="Wsdl" ID="081b9a2c-f9c2-43a8-9b09-e5462f986d81" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/QueueAnalysisLLS2.0.0RQ.wsdl" />
+    <MetadataFile FileName="sws_common.xsd" MetadataType="Schema" ID="2637695b-ec53-4836-a59a-3ff6222b13b3" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/sws_common.xsd" />
+    <MetadataFile FileName="STL_For_SabreProtocol_v.xsd" MetadataType="Schema" ID="70286857-f002-43a0-a666-68751cf4835c" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/STL_For_SabreProtocol_v.1.2.0.xsd" />
+    <MetadataFile FileName="wsse.xsd" MetadataType="Schema" ID="8659b451-1eb0-4639-82dc-ce1217923ae4" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/wsse.xsd" />
+    <MetadataFile FileName="QueueAnalysisLLS21.xsd" MetadataType="Schema" ID="595f551e-b7af-468f-bc5b-88b1946d2a6d" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/QueueAnalysisLLS2.0.0RQ.xsd" />
+    <MetadataFile FileName="envelope.xsd" MetadataType="Schema" ID="7d232cf7-990a-421c-b47b-daf4537ba75c" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/envelope.xsd" />
+    <MetadataFile FileName="QueueAnalysisLLS22.xsd" MetadataType="Schema" ID="c37b85fe-5d64-41e9-9c6f-2e5098680089" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/QueueAnalysisLLS2.0.0RS.xsd" />
+    <MetadataFile FileName="xmldsig-core-schema.xsd" MetadataType="Schema" ID="bed9dd63-00a2-4597-962e-2778b9c528b4" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xmldsig-core-schema.xsd" />
+    <MetadataFile FileName="msg-header-2_0.xsd" MetadataType="Schema" ID="ca61519e-cbb3-4ba9-b609-6a2aafb4b4eb" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/msg-header-2_0.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

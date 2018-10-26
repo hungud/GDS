@@ -1,0 +1,488 @@
+CREATE OR REPLACE PACKAGE nuevomundo.PKG_GDS_MODULO_PNR_PTA IS
+
+  -- Author  : BCHOY
+  -- Created : 17/10/2017 08:04:00
+  -- Purpose : 
+  
+  -- Public type declarations
+  type cursorGDS IS REF CURSOR;
+  
+PROCEDURE GDS_OBTENER_IATA_EMPRESA(
+  p_GDS       IN number,
+  p_Pseudo    IN varchar2,
+  p_IATA      OUT varchar2,
+  p_IdEmpresa OUT number);
+
+PROCEDURE GDS_OBTENER_CLIENTE(
+  p_IdCliente     IN number,
+  p_IdSubCodigo   IN number,
+  p_Cursor        OUT cursorGDS);
+
+
+
+
+
+-- BORRAR OBSOLETO --
+PROCEDURE GDS_OBTENER_TIPO_PASAJERO(
+  p_CodigoTarifa    IN varchar2,
+  p_IdTipoPasajero  IN varchar2,
+  p_Transportador   IN varchar2,
+  p_Cursor          OUT cursorGDS);
+-- BORRAR OBSOLETO --
+
+
+
+
+
+PROCEDURE GDS_OBTENER_TIPO_PASAJERO_1(
+  p_CodigoTarifa    IN varchar2,
+  p_IdTipoPasajero  IN varchar2,
+  p_Transportador   IN varchar2,
+  p_Cursor          OUT cursorGDS);
+
+PROCEDURE GDS_OBTENER_CIUDAD(
+  p_CodigoCiudad  IN varchar2,
+  p_Cursor        OUT cursorGDS);
+
+PROCEDURE GDS_OBTENER_TIPO_STOCK(
+  p_GDS           IN number,
+  p_CodigoTarifa  IN varchar2,
+  p_TipoTarifa    IN varchar2,
+  p_TipoStock     OUT varchar2);
+
+PROCEDURE GDS_OBTENER_TRANSPORTADORES(
+  p_Transportador  IN varchar2,
+  p_Cursor         OUT cursorGDS);
+
+PROCEDURE GDS_OBTENER_TRANSPORTADOR_ASOC(
+  p_NombreTransportador  IN varchar2,
+  p_Cursor               OUT cursorGDS);
+
+PROCEDURE GDS_OBT_TRANSPORTADORES_X_PREF(
+  p_Prefijo  IN varchar2,
+  p_Cursor   OUT cursorGDS);
+
+PROCEDURE GDS_EXISTE_CONCEPTO_55(
+  p_Transportador  IN varchar2,
+  p_Repeticiones   OUT number);
+
+-- inicio re/emisiones
+  
+PROCEDURE GDS_OBTENER_INTERFACE_PROV(
+  p_PseudoConsulta     IN varchar2,
+  p_PseudoEmision      IN varchar2,
+  p_Cursor             OUT cursorGDS);
+
+PROCEDURE GDS_OBTENER_PERFIL_IMPRESORA(
+  p_Pseudo     IN varchar2,
+  p_Perfil     OUT varchar2);
+
+PROCEDURE GDS_OBTENER_FILE_BOLETO(
+  p_Boleto     IN varchar2,
+  p_Cursor     OUT cursorGDS);
+
+-- fin re/emisiones
+
+-- inicio franquicias
+
+PROCEDURE GDS_OBTENER_FRANQUICIA_CONFIG(
+  p_IdCliente     IN number,
+  p_Cursor        OUT cursorGDS);
+
+-- fin franquicias
+
+END PKG_GDS_MODULO_PNR_PTA;
+
+-- // --
+
+CREATE OR REPLACE PACKAGE BODY nuevomundo.PKG_GDS_MODULO_PNR_PTA IS
+
+PROCEDURE GDS_OBTENER_IATA_EMPRESA(
+  p_GDS       IN number,
+  p_Pseudo    IN varchar2,
+  p_IATA      OUT varchar2,
+  p_IdEmpresa OUT number)
+
+AS
+BEGIN
+  p_IATA := NULL;
+
+  SELECT 
+    TRIM(PE.ID_IATA_PUNTO) AS IDATA, PE.ID_EMPRESA INTO p_IATA, p_IdEmpresa
+  FROM PUNTO_DE_EMISION PE 
+  WHERE (ROWNUM = 1)
+  AND (PE.ID_IATA_PUNTO IS NOT NULL)
+  AND ((UPPER(DECODE(p_GDS, 
+    0, PE.ID_PSEUDO_AMADEUS, 
+    1, PE.ID_PSEUDO_CITY, 
+    2, PE.PSEUDO_WORLDSPAN, 
+    3, PE.OFFICE_ID_KIUSYS))) = UPPER(DECODE(p_GDS, 0, SUBSTR(p_Pseudo, -4), p_Pseudo))) 
+  OR (UPPER(PE.PSEUDOS_ASOCIADOS) LIKE ('%' || UPPER(p_Pseudo) || '%')); -- UPPER(p_Pseudo)
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+      DBMS_OUTPUT.PUT_LINE('EXCEPTION: NO_DATA_FOUND');
+
+END GDS_OBTENER_IATA_EMPRESA;
+
+PROCEDURE GDS_OBTENER_CLIENTE(
+  p_IdCliente     IN number,
+  p_IdSubCodigo   IN number,
+  p_Cursor        OUT cursorGDS)
+
+AS
+BEGIN 
+    OPEN p_Cursor FOR 
+    SELECT 
+    CL.ID_CLIENTE AS IDCLIENTE, 
+    CL.NOMBRE AS NOMBRECLIENTE,
+    SC.ID_SUBCODIGO AS IDSUBCODIGO, 
+    TC.ID_TIPO_DE_CLIENTE AS IDTIPOCLIENTE,
+    CP.ID_CONDICION_DE_PAGO AS IDCONDICIONPAGO,
+    PM.ID_PROMOTOR AS IDPROMOTOR, 
+    PM.ID_VENDEDOR AS IDVENDEDOR 
+    FROM CLIENTE CL 
+    LEFT JOIN SUBCODIGO_CLIENTE SC ON (CL.ID_CLIENTE = SC.ID_CLIENTE) 
+    INNER JOIN TIPO_DE_CLIENTE TC ON (CL.ID_TIPO_DE_CLIENTE = TC.ID_TIPO_DE_CLIENTE) 
+    INNER JOIN CONDICION_DE_PAGO CP ON (CL.ID_CONDICION_DE_PAGO = CP.ID_CONDICION_DE_PAGO) 
+    LEFT JOIN PROMOTOR PM ON (CL.ID_PROMOTOR = PM.ID_PROMOTOR)
+     WHERE (CL.ID_CLIENTE = p_IdCliente) 
+    AND  NVL(SC.ID_SUBCODIGO,0) = NVL(
+                                  ( CASE p_IdSubCodigo 
+                                     WHEN 0 THEN
+                                       SC.ID_SUBCODIGO
+                                    ELSE
+                                       p_IdSubCodigo
+                                   END ), 0)
+    AND ROWNUM = 1 ;
+END GDS_OBTENER_CLIENTE;
+
+
+
+
+
+-- BORRAR OBSOLETO --
+PROCEDURE GDS_OBTENER_TIPO_PASAJERO(
+  p_CodigoTarifa      IN varchar2,
+  p_IdTipoPasajero  IN varchar2,
+  p_Transportador   IN varchar2,
+  p_Cursor          OUT cursorGDS)
+
+AS
+BEGIN 
+  OPEN p_Cursor FOR 
+  SELECT 
+    TP.ID_TIPO_DE_PAX_VUELO AS IDTIPOPASAJERO,
+    TP.DESCRIPCION, TP.PERTENECE, TP.EQUIVALE, 
+    TP.COUNTABLE AS REQUIEREASIENTO,
+    TP.PERTENECE_AMADEUS AS PERTENECEAMADEUS
+  FROM TIPO_DE_PAX_VUELO TP
+  WHERE (TP.ES_DESUSO = 0)
+  AND (DECODE(UPPER(p_CodigoTarifa), 'PL', TP.PUBLICADAS, 'PV', TP.PRIVADAS) = 1)
+  AND (UPPER(TP.ID_TIPO_DE_PAX_VUELO) = UPPER(COALESCE(p_IdTipoPasajero, TP.ID_TIPO_DE_PAX_VUELO)))
+  AND ((p_Transportador IS NULL) 
+  OR ((
+    SELECT COUNT(*) FROM 
+      (SELECT TRIM(regexp_substr(COALESCE(p_Transportador, 'X'), '[^,]+', 1, level)) ITEMS
+      FROM dual
+      CONNECT BY TRIM(regexp_substr(COALESCE(p_Transportador, 'X'), '[^,]+', 1, level)) IS NOT NULL) 
+    WHERE ITEMS IN (
+      SELECT TRIM(regexp_substr(COALESCE(TP.AEROLINEA, 'X'), '[^,]+', 1, level)) ITEMS
+      FROM dual
+      CONNECT BY TRIM(regexp_substr(COALESCE(TP.AEROLINEA, 'X'), '[^,]+', 1, level)) IS NOT NULL
+    )) > 0));
+  
+END GDS_OBTENER_TIPO_PASAJERO;
+-- BORRAR OBSOLETO --
+
+
+
+
+
+/* 
+PROCEDMIENTO PARA OBTENER TIPO PASAJERO PARA
+- SABRE (PREVENTA / POSTVENTA)
+- AMDEUS (PREVENTA)
+*/
+PROCEDURE GDS_OBTENER_TIPO_PASAJERO_1(
+  p_CodigoTarifa      IN varchar2,
+  p_IdTipoPasajero  IN varchar2,
+  p_Transportador   IN varchar2,
+  p_Cursor          OUT cursorGDS)
+
+AS
+BEGIN 
+  OPEN p_Cursor FOR 
+  SELECT 
+    TP.ID_TIPO_DE_PAX_VUELO AS IDTIPOPASAJERO,
+    TP.DESCRIPCION, TP.PERTENECE, TP.EQUIVALE, 
+    TP.COUNTABLE AS REQUIEREASIENTO,
+    TP.PERTENECE_AMADEUS AS PERTENECEAMADEUS
+  FROM TIPO_DE_PAX_VUELO TP
+  WHERE (TP.ES_DESUSO = 0)
+  AND (DECODE(UPPER(p_CodigoTarifa), 'PL', TP.PUBLICADAS, 'PV', TP.PRIVADAS) = 1)
+  AND (UPPER(TP.ID_TIPO_DE_PAX_VUELO) = UPPER(COALESCE(p_IdTipoPasajero, TP.ID_TIPO_DE_PAX_VUELO)))
+  AND ((p_Transportador IS NULL) 
+  OR ((
+    SELECT COUNT(*) FROM 
+      (SELECT TRIM(regexp_substr(COALESCE(p_Transportador, 'X'), '[^,]+', 1, level)) ITEMS
+      FROM dual
+      CONNECT BY TRIM(regexp_substr(COALESCE(p_Transportador, 'X'), '[^,]+', 1, level)) IS NOT NULL) 
+    WHERE ITEMS IN (
+      SELECT TRIM(regexp_substr(COALESCE(TP.AEROLINEA, 'X'), '[^,]+', 1, level)) ITEMS
+      FROM dual
+      CONNECT BY TRIM(regexp_substr(COALESCE(TP.AEROLINEA, 'X'), '[^,]+', 1, level)) IS NOT NULL
+    )) > 0));
+  
+END GDS_OBTENER_TIPO_PASAJERO_1;
+
+PROCEDURE GDS_OBTENER_CIUDAD(
+  p_CodigoCiudad  IN varchar2,
+  p_Cursor        OUT cursorGDS)
+
+AS
+BEGIN 
+  OPEN p_Cursor FOR 
+  SELECT 
+    PS.ID_PAIS AS IDPAIS,
+    UPPER(PS.NOMBRE) AS NOMBREPAIS, 
+    RN.ID_REGION AS IDREGION,
+    UPPER(RN.NOM_REGION) AS NOMBREREGION,
+    CD.ID_CIUDAD AS CODIGOCIUDADSEGMENTO,
+    COALESCE(CD.ID_CIUDAD_AEROPUERTO, CD.ID_CIUDAD) AS IDCIUDAD,
+    UPPER(CD.NOMBRE) AS NOMBRECIUDAD,
+    CD.CIUDAD_EQUIVALENTE AS CIUDADEQUIVALENTE, 
+    PS.NECESITA_DOCS AS NECESITADOCS, 
+    CD.ES_NACIONAL AS ESNACIONAL, 
+    CD.ES_AEROPUERTO AS ESAEROPUERTO,
+    CD.ES_ESTACION_TREN AS ESESTACIONTREN, 
+    CD.PROHIBE_EMISION AS PROHIBEEMISION 
+  FROM CIUDAD CD 
+  INNER JOIN PAIS PS ON (CD.ID_PAIS = PS.ID_PAIS) 
+  INNER JOIN REGION RN ON (PS.ID_REGION = RN.ID_REGION) 
+  WHERE (CD.ID_CIUDAD IN ( 
+    SELECT TRIM(regexp_substr(UPPER(p_CodigoCiudad), '[^,]+', 1, level)) ITEMS
+    FROM dual
+    CONNECT BY TRIM(regexp_substr(UPPER(p_CodigoCiudad), '[^,]+', 1, level)) IS NOT NULL
+  ));
+
+END GDS_OBTENER_CIUDAD;
+
+PROCEDURE GDS_OBTENER_TIPO_STOCK(
+  p_GDS           IN number,
+  p_CodigoTarifa  IN varchar2,
+  p_TipoTarifa    IN varchar2,
+  p_TipoStock     OUT varchar2)
+
+AS
+  v_es_it number := 0;  
+
+BEGIN 
+  p_TipoStock := NULL;
+
+  IF ((UPPER(p_CodigoTarifa) = 'PV') AND (UPPER(p_TipoTarifa) = 'IT')) THEN
+    v_es_it := 1;
+  END IF;
+
+  SELECT TS.ID_TIPO_DE_STOCK INTO p_TipoStock 
+  FROM TIPO_DE_STOCK TS
+  WHERE (TS.EN_DESUSO = 0)
+  AND (TS.ES_ELECTRONICO = 1) 
+  AND (TS.ID_GDS = p_GDS) 
+  AND (TS.ES_IT = v_es_it);
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+      DBMS_OUTPUT.PUT_LINE('EXCEPTION: NO_DATA_FOUND');
+
+END GDS_OBTENER_TIPO_STOCK;
+
+PROCEDURE GDS_OBTENER_TRANSPORTADORES(
+  p_Transportador  IN varchar2,
+  p_Cursor         OUT cursorGDS)
+
+AS
+  v_transportador varchar2(100);
+
+BEGIN
+  v_transportador := REPLACE(p_Transportador, 'LA', 'LP');
+  v_transportador := REPLACE(v_transportador, 'TA', 'T0');
+
+  OPEN p_Cursor FOR 
+  SELECT 
+    UPPER(TRIM(NVL(TS.LINEA_AEREA_HOMOLOGA, TS.ID_TRANSPORTADOR))) AS HOMOLOGA, 
+    UPPER(TRIM(NVL(TS.LINEA_AEREA_EQUIVALENTE, TS.ID_TRANSPORTADOR))) AS EQUIVALENTE, 
+    CASE 
+      WHEN (UPPER(TS.ID_TRANSPORTADOR) = 'TA') THEN 'T0' 
+      WHEN (UPPER(TS.ID_TRANSPORTADOR) = 'LA') THEN 'LP' 
+      ELSE UPPER(TS.ID_TRANSPORTADOR) 
+    END AS CAMBIO, 
+	  TS.NECESITA_FOID AS NECESITAFOID, 
+    TS.ID_PREFIJO AS IDPREFIJO 
+  FROM TRANSPORTADOR TS 
+  WHERE (UPPER(TS.ID_TRANSPORTADOR) IN ( 
+    SELECT TRIM(regexp_substr(UPPER(v_transportador), '[^,]+', 1, level)) ITEMS
+    FROM dual
+    CONNECT BY TRIM(regexp_substr(UPPER(v_transportador), '[^,]+', 1, level)) IS NOT NULL
+  ));
+
+END GDS_OBTENER_TRANSPORTADORES;
+
+PROCEDURE GDS_OBTENER_TRANSPORTADOR_ASOC(
+  p_NombreTransportador  IN varchar2,
+  p_Cursor               OUT cursorGDS)
+
+AS
+BEGIN
+  OPEN p_Cursor FOR 
+  SELECT 
+    UPPER(TS.ID_TRANSPORTADOR) AS IDTRANSPORTADOR, 
+    TS.NOMBRE AS NOMBRETRANSPORTADOR 
+  FROM TRANSPORTADOR TS 
+  WHERE (UPPER(TS.NOMBRE) LIKE ('%' || UPPER(p_NombreTransportador) || '%'))
+  UNION 
+  SELECT 
+    UPPER(TA.ID_TRANSPORTADOR_ASOCIADO) AS IDTRANSPORTADOR,
+    TA.NOMBRE_ASOCIADO AS NOMBRETRANSPORTADOR 
+  FROM TRANSPORTADOR_ASOCIADO TA
+  WHERE (UPPER(TA.NOMBRE_ASOCIADO) LIKE ('%' || UPPER(p_NombreTransportador) || '%'));
+
+END GDS_OBTENER_TRANSPORTADOR_ASOC;
+
+PROCEDURE GDS_OBT_TRANSPORTADORES_X_PREF(
+  p_Prefijo  IN varchar2,
+  p_Cursor   OUT cursorGDS)
+
+AS
+BEGIN
+  OPEN p_Cursor FOR 
+  SELECT 
+    UPPER(TRIM(NVL(TS.LINEA_AEREA_HOMOLOGA, TS.ID_TRANSPORTADOR))) AS HOMOLOGA, 
+    UPPER(TRIM(NVL(TS.LINEA_AEREA_EQUIVALENTE, TS.ID_TRANSPORTADOR))) AS EQUIVALENTE, 
+    CASE 
+      WHEN (UPPER(TS.ID_TRANSPORTADOR) = 'TA') THEN 'T0' 
+      WHEN (UPPER(TS.ID_TRANSPORTADOR) = 'LA') THEN 'LP' 
+      ELSE UPPER(TS.ID_TRANSPORTADOR) 
+    END AS CAMBIO, 
+	  TS.NECESITA_FOID AS NECESITAFOID, 
+    TS.ID_PREFIJO AS IDPREFIJO 
+  FROM TRANSPORTADOR TS 
+  WHERE (UPPER(TS.ID_PREFIJO) IN ( 
+    SELECT TRIM(regexp_substr(UPPER(p_Prefijo), '[^,]+', 1, level)) ITEMS
+    FROM dual
+    CONNECT BY TRIM(regexp_substr(UPPER(p_Prefijo), '[^,]+', 1, level)) IS NOT NULL
+  ));
+
+END GDS_OBT_TRANSPORTADORES_X_PREF;
+
+PROCEDURE GDS_EXISTE_CONCEPTO_55(
+  p_Transportador  IN varchar2,
+  p_Repeticiones   OUT number)
+
+AS
+BEGIN
+  p_Repeticiones := NULL;
+
+  SELECT COUNT(*) INTO p_Repeticiones 
+  FROM TOURCODES_VALORES TV 
+  WHERE (TV.ID_GRUPO = 3)
+  AND (TV.CODIGO_CONCEPTO = 55)
+  AND (TV.ID_TRANSPORTADOR IN ( 
+    SELECT TRIM(regexp_substr(UPPER(p_Transportador), '[^,]+', 1, level)) ITEMS
+    FROM dual
+    CONNECT BY TRIM(regexp_substr(UPPER(p_Transportador), '[^,]+', 1, level)) IS NOT NULL
+  ));
+
+END GDS_EXISTE_CONCEPTO_55;
+
+-- inicio re/emisiones
+
+PROCEDURE GDS_OBTENER_INTERFACE_PROV(
+  p_PseudoConsulta     IN varchar2,
+  p_PseudoEmision      IN varchar2,
+  p_Cursor             OUT cursorGDS)
+
+AS
+BEGIN 
+  OPEN p_Cursor FOR 
+  SELECT 
+    IP.PSEUDO_CONSULTA AS PSEUDOCONSULTA, 
+    IP.ESQUEMA_CONSULTA AS ESQUEMACONSULTA, 
+    IP.PROVEEDOR_PTA_CONSULTA AS PROVEEDORCONSULTA, 
+    IP.REFERENCIA_PTA_CONSULTA AS REFERENCIACONSULTA, 
+    IP.PSEUDO_EMISION AS PSEUDOEMISION, 
+    IP.ESQUEMA_EMISION AS ESQUEMAEMISION, 
+    IP.PROVEEDOR_PTA_EMISION AS PROVEEDOREMISION, 
+    IP.REFERENCIA_PTA_EMISION AS REFERENCIAEMISION, 
+	  IP.DOBLE_INTERFACE AS DOBLEINTERFACE 
+  FROM GDS_INTERFACE_PROVEEDOR IP 
+  WHERE (UPPER(IP.PSEUDO_CONSULTA) = TRIM(UPPER(p_PseudoConsulta)))
+  AND (UPPER(IP.PSEUDO_EMISION) = TRIM(UPPER(p_PseudoEmision)));
+
+END GDS_OBTENER_INTERFACE_PROV;
+
+PROCEDURE GDS_OBTENER_PERFIL_IMPRESORA(
+  p_Pseudo     IN varchar2,
+  p_Perfil     OUT varchar2)
+
+AS
+BEGIN
+	p_Perfil := NULL;
+
+	SELECT UPPER(PIP.PERFIL) INTO p_Perfil
+	FROM GDS_PERFIL_IMPRESORA_PSEUDO PIP
+	WHERE (UPPER(PIP.PSEUDO) = TRIM(UPPER(p_Pseudo)));
+
+END GDS_OBTENER_PERFIL_IMPRESORA;
+
+PROCEDURE GDS_OBTENER_FILE_BOLETO(
+  p_Boleto     IN varchar2,
+  p_Cursor     OUT cursorGDS)
+
+AS
+BEGIN 
+  OPEN p_Cursor FOR 
+  SELECT 
+    BP.NUMERO_DE_BOLETO AS NUMEROBOLETO,
+	BP.ID_SUCURSAL AS IDSUCURSAL,
+    BP.ID_PUNTO AS IDPUNTO,
+    BP.ID_PROVEEDOR AS IDPROVEEDOR,
+    BP.ID_COTIZACION AS IDCOTIZACION,
+    BP.ID_FILE AS IDFILE,
+    BP.ID_FILE_REFERENCIA AS IDFILEREFERENCIA 
+  FROM BOLETO_PAX BP 
+  WHERE (BP.NUMERO_DE_BOLETO IN ( 
+    SELECT TRIM(regexp_substr(p_Boleto, '[^,]+', 1, level)) ITEMS
+    FROM dual
+    CONNECT BY TRIM(regexp_substr(p_Boleto, '[^,]+', 1, level)) IS NOT NULL
+  ));
+
+END GDS_OBTENER_FILE_BOLETO;
+
+-- fin re/emisiones
+
+-- inicio franquicias
+
+PROCEDURE GDS_OBTENER_FRANQUICIA_CONFIG(
+  p_IdCliente     IN number,
+  p_Cursor        OUT cursorGDS)
+
+AS
+BEGIN 
+  OPEN p_Cursor FOR 
+  SELECT 
+    CF.ID_CLIENTE AS IDCLIENTE,
+    CF.ID_EMPRESA AS IDEMPRESA,
+    CF.SERVERNAME,
+    CF.NOM_DATABASE AS ESQUEMA,
+    CF.USERID AS USUARIO,
+    CF.PASSWORD AS CONTRASENA,
+    CF.CODIGO_REF AS CODIGOREF
+  FROM CLIENTE_FRANQUICIA CF
+  WHERE (CF.ID_CLIENTE = p_IdCliente);
+
+END GDS_OBTENER_FRANQUICIA_CONFIG;
+
+-- fin franquicias
+
+END PKG_GDS_MODULO_PNR_PTA;

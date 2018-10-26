@@ -1,0 +1,10 @@
+D:\Proyectos\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\bin\Debug\AmadeusLATAM.B2BWallet.Common.dll
+D:\Proyectos\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\bin\Debug\AmadeusLATAM.B2BWallet.Common.pdb
+D:\Proyectos\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\obj\Debug\AmadeusLATAM.B2BWallet.Common.csprojResolveAssemblyReference.cache
+D:\Proyectos\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\obj\Debug\AmadeusLATAM.B2BWallet.Common.dll
+D:\Proyectos\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\obj\Debug\AmadeusLATAM.B2BWallet.Common.pdb
+C:\GDS\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\bin\Debug\AmadeusLATAM.B2BWallet.Common.dll
+C:\GDS\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\bin\Debug\AmadeusLATAM.B2BWallet.Common.pdb
+C:\GDS\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\obj\Debug\AmadeusLATAM.B2BWallet.Common.csprojResolveAssemblyReference.cache
+C:\GDS\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\obj\Debug\AmadeusLATAM.B2BWallet.Common.dll
+C:\GDS\GDS_ServicioGDS\Librerias\Amadeus\AmadeusLATAM.B2BWallet.Common\obj\Debug\AmadeusLATAM.B2BWallet.Common.pdb

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:stlp="http://services.sabre.com/STL_Payload/v02_01" elementFormDefault="qualified" targetNamespace="http://services.sabre.com/sp/air/ticket/v1" xmlns="http://www.w3.org/2001/XMLSchema">
+  <import schemaLocation="built-ins/STL2_Payload_v02_01.xsd" namespace="http://services.sabre.com/STL_Payload/v02_01" />
+  <element name="AirTicketRS">
+    <complexType>
+      <complexContent mixed="false">
+        <extension base="stlp:STL_Response_Payload">
+          <sequence>
+            <element minOccurs="0" maxOccurs="unbounded" name="Summary">
+              <annotation>
+                <documentation>"Summary" element is used to return a summary information about the documents that were found.</documentation>
+              </annotation>
+              <complexType>
+                <sequence>
+                  <element name="DocumentNumber" type="string">
+                    <annotation>
+                      <documentation>Document serial number.</documentation>
+                    </annotation>
+                  </element>
+                  <element name="LocalIssueDateTime" type="dateTime">
+                    <annotation>
+                      <documentation>Document issue date and time - in local time zone of the station that issued it.</documentation>
+                    </annotation>
+                  </element>
+                  <element name="DocumentType" type="string">
+                    <annotation>
+                      <documentation>Document type. Possible values are TKT, MSR and EMD.</documentation>
+                    </annotation>
+                  </element>
+                  <element name="IssuingLocation" type="string">
+                    <annotation>
+                      <documentation>Station location code (usually city code) of the station that issued the document.</documentation>
+                    </annotation>
+                  </element>
+                  <element minOccurs="0" name="Reservation">
+                    <annotation>
+                      <documentation>PNR locator of the PNR containing this document. Returned if the document is a part of a PNR.</documentation>
+                    </annotation>
+                    <complexType>
+                      <simpleContent>
+                        <extension base="string">
+                          <attribute name="provider" type="string">
+                            <annotation>
+                              <documentation>Attribute provider informs about the code of the airline that owns the PNR. Optional.</documentation>
+                            </annotation>
+                          </attribute>
+                          <attribute name="purgeDate" type="dateTime" />
+                          <attribute name="createDate" type="dateTime" />
+                        </extension>
+                      </simpleContent>
+                    </complexType>
+                  </element>
+                  <element name="FirstName" type="string">
+                    <annotation>
+                      <documentation>First name of the customer.</documentation>
+                    </annotation>
+                  </element>
+                  <element name="LastName" type="string">
+                    <annotation>
+                      <documentation>Last name (family name or surname) of the customer. Required.</documentation>
+                    </annotation>
+                  </element>
+                  <element minOccurs="0" name="DocumentStatus" type="string">
+                    <annotation>
+                      <documentation>Status of the document found (of the whole document, not particular coupon). Possible values:
+												V – VOIDED
+												E – EXCHANGED
+												R – REFUNDED
+											</documentation>
+                    </annotation>
+                  </element>
+                  <element minOccurs="0" name="TotalAmount">
+                    <annotation>
+                      <documentation>Total amount of money paid for this document.</documentation>
+                    </annotation>
+                    <complexType>
+                      <simpleContent>
+                        <extension base="string">
+                          <attribute name="currencyCode" type="string" />
+                          <attribute name="decimalPlace" type="integer" />
+                        </extension>
+                      </simpleContent>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+</schema>

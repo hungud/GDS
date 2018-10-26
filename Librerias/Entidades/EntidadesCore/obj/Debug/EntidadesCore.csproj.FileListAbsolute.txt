@@ -1,0 +1,5 @@
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesCore\bin\Debug\EntidadesCore.dll
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesCore\bin\Debug\EntidadesCore.pdb
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesCore\obj\Debug\EntidadesCore.csprojResolveAssemblyReference.cache
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesCore\obj\Debug\EntidadesCore.dll
+D:\Proyectos\GDS_ServicioGDS\Librerias\Entidades\EntidadesCore\obj\Debug\EntidadesCore.pdb

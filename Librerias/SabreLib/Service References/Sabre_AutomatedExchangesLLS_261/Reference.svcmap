@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="addb47a6-d183-48b7-9285-68fef77be8ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webservices.sabre.com/wsdl/tpfc/AutomatedExchangesLLS2.6.1RQ.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xml.xsd" MetadataType="Schema" ID="14442baa-740a-4e49-8d95-4663f7d82efc" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xml.xsd" />
+    <MetadataFile FileName="xlink.xsd" MetadataType="Schema" ID="dcb293a3-584b-4d6b-a421-dd5dab6c1784" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xlink.xsd" />
+    <MetadataFile FileName="AutomatedExchangesLLS2.wsdl" MetadataType="Wsdl" ID="cec6c276-04f3-4efe-a223-6e43607424a8" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/AutomatedExchangesLLS2.6.1RQ.wsdl" />
+    <MetadataFile FileName="STL_Header_v.xsd" MetadataType="Schema" ID="9112ac65-6b35-48f3-a649-a558d8985cad" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/STL_Header_v.1.2.0.xsd" />
+    <MetadataFile FileName="AutomatedExchangesLLS2.xsd" MetadataType="Schema" ID="5b8e298d-e0ce-433a-9b6d-9c262a8c1b8a" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/AutomatedExchangesLLS2.6.1RQRS.xsd" />
+    <MetadataFile FileName="sws_common.xsd" MetadataType="Schema" ID="4938870d-22cd-4eb8-8024-883086c41671" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/sws_common.xsd" />
+    <MetadataFile FileName="AutomatedExchangesLLS21.xsd" MetadataType="Schema" ID="10302ddc-b0cf-4952-b6a2-3716ecf9a844" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/AutomatedExchangesLLS2.6.1RQ.xsd" />
+    <MetadataFile FileName="wsse.xsd" MetadataType="Schema" ID="a7ed2b45-836e-40ef-8e50-9241ef1dbf3a" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/wsse.xsd" />
+    <MetadataFile FileName="STL_For_SabreProtocol_v.xsd" MetadataType="Schema" ID="c197f25c-9a11-4a28-af0f-7d5035b4980c" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/STL_For_SabreProtocol_v.1.2.0.xsd" />
+    <MetadataFile FileName="AutomatedExchangesLLS22.xsd" MetadataType="Schema" ID="7418e441-a841-498a-a7ab-5e7e0e039748" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/AutomatedExchangesLLS2.6.1RS.xsd" />
+    <MetadataFile FileName="envelope.xsd" MetadataType="Schema" ID="a264d1d7-fca9-44d1-8570-19f52ffb21e7" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/envelope.xsd" />
+    <MetadataFile FileName="xmldsig-core-schema.xsd" MetadataType="Schema" ID="f5a872d6-1eeb-4848-a0d3-bf210df3ac89" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/xmldsig-core-schema.xsd" />
+    <MetadataFile FileName="msg-header-2_0.xsd" MetadataType="Schema" ID="66c2e0f5-9597-4d90-b31b-ff5044e62aca" SourceId="1" SourceUrl="http://webservices.sabre.com/wsdl/tpfc/msg-header-2_0.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
